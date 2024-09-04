@@ -1,0 +1,104 @@
+/* RegistrationForm.css */
+
+.registrationform-container {
+  background-color: aliceblue;
+}
+
+.registrationform-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1000px; /* Adjust as needed */
+  margin: 0 auto;
+  background-color: aliceblue;
+}
+
+.registrationform-heading {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.registrationform-description {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.registrationform-containerr {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.registrationform-student-info,
+.registrationform-guardian-info {
+  display: flex;
+  flex-direction: column;
+  width: 48%; /* Adjust as needed */
+}
+
+.registrationform-label {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.registrationform-textarea {
+  height: 86px; /* Adjust the height as needed */
+  width: 100%; /* Ensure it takes the full width of the container */
+  padding: 5px; /* Add some padding for better readability */
+  border-radius: 4px; /* Optional: for rounded corners */
+  border: 1px solid #ccc; /* Border styling */
+  box-sizing: border-box; /* Ensure padding is included in the width and height */
+}
+
+.registrationform-input,
+.registrationform-select,
+.registrationform-textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.registrationform-checkbox {
+  width: auto;
+  margin-right: 5px;
+}
+
+.registrationform-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.registrationform-submit-button {
+  padding: 10px 15px;
+  font-size: 14px;
+  margin-top: 20px;
+  margin-right: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: #4CAF50; /* Green background for Register button */
+  color: white;
+}
+
+.registrationform-submit-button:hover {
+  background-color: rgb(215, 84, 84); /* Red background on hover */
+  color: white; /* White text color on hover */
+}
+
+.registrationform-back-button {
+  padding: 10px 15px;
+  font-size: 14px;
+  margin-top: 20px;
+  margin-right: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: red; /* Red background for Back button */
+  color: white;
+}
+
+.registrationform-back-button:hover {
+  background-color: rgb(216, 109, 109); /* Darker red on hover */
+  color: white; /* White text color on hover */
+}

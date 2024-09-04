@@ -1,0 +1,152 @@
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    margin: var(--margin-top) auto 0 auto;  
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    gap: 10px;
+    max-width: var(--max-screen);
+    margin-top: var(--margin-top);
+  }
+  
+
+
+.leftPanel,
+.rightPanel {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.leftPanel:hover,
+.rightPanel:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.panelTitle {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.feeTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.feeTable th,
+.feeTable td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid #6d6767;
+}
+
+.feeTable th {
+  background-color: var(--secondary-color);
+  color: white;
+  font-weight: bold;
+}
+
+.row {
+  transition: background-color 0.3s ease;
+}
+.selected {
+  background-color: #4caf50;
+}
+
+.moveButton {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.moveButton:hover {
+  background-color: var(--secondary-color);
+}
+
+.rightPanel {
+  position: relative;
+}
+
+.rightPanel ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.feeItem {
+  padding: 12px 0;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 1rem;
+}
+
+.bottomButtons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.saveButton,
+.closeButton {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 48%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.saveButton {
+  background-color: #4caf50;
+  color: white;
+}
+
+.saveButton:hover {
+  background-color: #45a049;
+}
+
+.closeButton {
+  background-color: #f44336;
+  color: white;
+}
+
+.closeButton:hover {
+  background-color: #e53935;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bottomButtons {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 20px;
+  }
+
+  .saveButton,
+  .closeButton {
+    width: 100%;
+    margin-bottom: 10px;  
+  }
+}

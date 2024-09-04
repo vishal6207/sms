@@ -1,0 +1,104 @@
+.my-account {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: aliceblue;
+    font-family: Arial, sans-serif;
+  }
+  
+  .my-account h1 {
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  .header-note {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .student-info, .contact-info {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #dcdcdc;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  .student-info h2, .contact-info h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  
+  .info-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .address-textarea {
+    width: 100%;
+    resize: vertical; 
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .info-row input, .info-row textarea {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  .info-row label {
+    flex: 1;
+    margin-right: 10px;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .info-row input {
+    flex: 2;
+  }
+  
+  .info-row button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .actionss {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .actionss button {
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .actionss button:hover {
+    background-color: #dcdcdc;
+  }
+  
+  @media (max-width: 768px) {
+    .info-row {
+      flex-direction: column;
+    }
+  
+    .info-row label, .info-row input, .info-row button {
+      width: 100%;
+      margin: 5px 0;
+    }
+  
+    .actionss {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  

@@ -1,0 +1,123 @@
+:root {
+  --text-color: #09060e;
+  --background-color: #f7f4fb;
+  --primary-color: #8748d0;
+  --secondary-color: #b588e8;
+  --accent-color: #954ce7;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--background-color);
+  border-bottom: 1px solid var(--secondary-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1000;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.erp {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.navItems {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  transition: transform 0.3s ease;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navLink:hover {
+  color: var(--primary-color);
+}
+
+.icon {
+  margin-right: 8px;
+  color: var(--primary-color);
+  font-size: 18px;
+}
+
+.toggleButton {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--primary-color);
+  cursor: pointer;
+  z-index: 1001;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navItems {
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--background-color);
+      border-top: 1px solid var(--secondary-color);
+      transform: translateX(-100%);
+      z-index: 999;
+      padding-top: 60px;
+  }
+
+  .open {
+      transform: translateX(0);
+  }
+
+  .toggleButton {
+      display: block;
+      margin-left: auto;
+  }
+
+  .closeButton {
+      display: block; 
+  }
+}
+
+.blurBackground {
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  transition: backdrop-filter 0.3s ease;
+  z-index: 998;
+}
+
+.mainContent {
+  padding: 20px;
+}

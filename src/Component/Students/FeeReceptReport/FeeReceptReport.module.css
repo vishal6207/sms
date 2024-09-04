@@ -1,0 +1,177 @@
+/* Container */
+.feeReceptContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--background-color);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Title */
+.feeReceptTitle {
+  font-size: 36px; /* Responsive font size */
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Form */
+.feeReceptForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Form Group */
+/* Form Group */
+.feeReceptFormGroup {
+  display: flex;
+  align-items: center; /* Vertically center the label and input */
+  justify-content: space-between; /* Add space between label and input */
+  margin-bottom: 15px;
+}
+
+/* Label */
+.feeReceptLabel {
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0; /* Remove the bottom margin */
+  font-size: 4vw; /* Responsive font size */
+  margin-right: 10px; /* Add some space between label and input */
+  flex: 1; /* Allow the label to take up space */
+}
+
+/* Input and Select */
+.feeReceptInput,
+.feeReceptSelect {
+  color: black;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 4vw; /* Responsive font size */
+  width: 43%; /* Adjust width to fit alongside the label */
+  box-sizing: border-box;
+  background-color: #ffffff; /* Ensure white background for all inputs */
+}
+
+.feeReceptInput1 {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 4vw; /* Responsive font size */
+  width: 100%; /* Make the input take full width on small screens */
+  max-width: 100%; /* Ensure it does not exceed the container */
+  box-sizing: border-box;
+  background-color: #ffffff; /* Ensure white background for all inputs */
+}
+
+.feeReceptSelect {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path d='M7 10l5 5 5-5z'></path></svg>") no-repeat right 15px center;
+  
+}
+
+/* Radio Group */
+.feeReceptRadioGroup {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.feeReceptRadioGroup1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-right: 60px;
+}
+
+.feeReceptRadio {
+  display: flex;
+  align-items: center;
+  font-size: 4vw; /* Responsive font size */
+  font-family: 'Poppins', sans-serif;
+}
+
+.feeReceptRadio input {
+  margin-right: 5px;
+}
+
+/* Button Group */
+.feeReceptButtonGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin: 30px;
+}
+
+.feeReceptButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 4vw; /* Responsive font size */
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.feeReceptShow {
+  background-color: var(--primary-color); /* Blue */
+  color: #fff;
+}
+
+.feeReceptPrint {
+  background-color: var(--primary-color); /* Green */
+  color: #fff;
+}
+
+
+
+.feeReceptButton:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.feeReceptButton:active {
+  opacity: 0.8;
+  transform: translateY(0);
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 768px) {
+  .feeReceptTitle {
+    font-size: 24px;
+  }
+
+  .feeReceptLabel {
+    font-size: 16px;
+  }
+
+  .feeReceptInput,
+  .feeReceptSelect {
+    font-size: 16px;
+  }
+
+  .feeReceptRadio {
+    font-size: 16px;
+  }
+
+  .feeReceptButton {
+    font-size: 16px;
+  }
+
+  .feeReceptButtonGroup {
+    flex-direction: row;
+    gap: 15px;
+  }
+}

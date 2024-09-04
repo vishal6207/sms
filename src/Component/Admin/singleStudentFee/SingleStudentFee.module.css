@@ -1,0 +1,109 @@
+ 
+.navbar {
+  background-color: var(--primary-color);  
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;  
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+  max-width:var(--max-screen);
+  margin: 0 auto;
+  border-radius: 10px;  
+  margin-top: var(--margin-top);
+}
+
+  
+  .searchContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+  }
+  
+  .searchInput {
+    padding: 12px 20px;  
+    margin-right: 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: #f5f5f5;  
+    color: #000000;  
+    font-size: 16px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+  }
+  
+  .searchInput::placeholder {
+    color: #7f8c8d;  
+  }
+  
+  .searchInput:focus {
+    background-color: #ffffff;  
+    outline: 3px solid var(--secondary-color);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+  }
+  
+  .infoContainer {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .infoItem {
+    display: flex;
+    align-items: center;
+    background-color: var(--secondary-color);  
+    padding: 10px 15px;
+    border-radius: 8px;
+  }
+  
+  .infoTitle {
+    font-weight: 600;
+    margin-right: 8px;
+    color: var(--primary-color);  
+    white-space: nowrap;  
+  }
+  
+  .infoValue {
+    color: #ecf0f1; 
+    white-space: nowrap;  
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px;
+    }
+  
+    .searchContainer {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .searchInput {
+      margin-right: 0;
+      width: 100%;  
+    }
+
+    .bottomButtons{
+      background-color: pink;
+    }
+  
+    .infoContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      width: 100%;
+      margin-top: 15px;  
+    }
+     .infoItem{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+     }
+     
+  }
+  

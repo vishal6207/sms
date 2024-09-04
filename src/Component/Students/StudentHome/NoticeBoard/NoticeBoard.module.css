@@ -1,0 +1,36 @@
+
+.noticeCard {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+  
+  .noticeCard h5 {
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .noticeCard small {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .noticeLink {
+    color: whitesmoke;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 8px;
+  }
+  
+  .noticeLink:hover {
+    text-decoration: underline;
+  }
+  

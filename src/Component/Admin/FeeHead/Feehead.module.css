@@ -1,0 +1,182 @@
+.feeheadContainer {
+    font-family: poppins , sans-serif;
+    padding: 20px;
+    max-width: var(--max-screen);
+    margin: auto;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.feeheadTable {
+    width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.feeheadTable th, .feeheadTable td {
+    padding: 14px 20px;
+    text-align: left;
+}
+
+.feeheadTable th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.feeheadTable td {
+    border-bottom: 1px solid #ddd;
+    color: #333;
+}
+
+.feeheadTable tr:hover {
+    background-color: #f1f1f1;
+}
+
+.feeheadTable td:last-child {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .feeheadTable th, .feeheadTable td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .feeheadTable th {
+        text-align: center;
+    }
+
+    .feeheadTable td {
+        text-align: center;
+        padding: 7px 12px;
+        border-bottom: none;
+        position: relative;
+    }
+
+    .feeheadTable td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 5px;
+        color: var(--primary-color);
+    }
+
+    .feeheadTable td:last-child {
+        text-align: center;
+    }
+}
+
+.feeheadButton, .feeheadEditButton, .feeheadDeleteButton {
+    padding: 12px 24px;
+    margin: 10px 5px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.feeheadDeleteButton {
+    background-color: var(--primary-color);
+}
+
+.feeheadButton:hover, .feeheadEditButton:hover, .feeheadDeleteButton:hover {
+    background-color: (--primary-color);
+    transform: translateY(-2px);
+}
+
+.feeheadButton:active, .feeheadEditButton:active, .feeheadDeleteButton:active {
+    background-color: var(--primary-color);
+    transform: translateY(0);
+}
+
+.feeheadModalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.feeheadModal {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: feeheadSlideDown 0.4s ease;
+}
+
+@keyframes feeheadSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.feeheadModal h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+.feeheadInput {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.feeheadInput:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.feeheadModalButton {
+    width: 100%;
+    padding: 14px 0;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.feeheadModalButton:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.feeheadModalButton:active {
+    background-color: var(--primary-color);
+    transform: translateY(0);
+}

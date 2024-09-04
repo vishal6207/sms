@@ -1,0 +1,177 @@
+:root {
+    --text-color: #09060e;
+    --background-color: #f7f4fb;
+    --primary-color: #8748d0;
+    --secondary-color: #b588e8;
+    --accent-color: #954ce7;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+  }
+  
+  .data-fee-module {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .data-fee-title {
+    color: var(--text-color);
+  }
+  
+  .data-fee-description {
+    margin-bottom: 20px;
+  }
+  
+  .data-filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .data-filters select {
+    padding: 8px;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    color: var(--text-color);
+  }
+  
+  .data-button-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: flex-end;
+  }
+  
+  .data-btn,
+  .data-btn-print,
+  .data-btn-view {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .data-btn {
+    background-color: var(--primary-color);
+  }
+  
+  .data-btn:hover {
+    background-color: #6b2b9d; /* Darkened primary color */
+  }
+  
+  .data-btn-print {
+    background-color: var(--accent-color);
+  }
+  
+  .data-btn-print:hover {
+    background-color: #8542d3; /* Darkened accent color */
+  }
+  
+  .data-btn-view {
+    background-color: var(--secondary-color);
+  }
+  
+  .data-btn-view:hover {
+    background-color: #9a7eab; /* Darkened secondary color */
+  }
+  
+  .data-table-container {
+    margin-top: 20px;
+    border: 1px solid var(--accent-color);
+    padding: 10px;
+    background-color: var(--background-color);
+    overflow-x: auto;
+  }
+  
+  .data-table-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--text-color);
+  }
+  
+  .data-fee-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .data-fee-table th,
+  .data-fee-table td {
+    border: 1px solid var(--accent-color);
+    padding: 8px;
+    text-align: left;
+    color: var(--text-color);
+  }
+  
+  .data-fee-table th {
+    background-color: var(--secondary-color);
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .modal-table-container {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .modal-fee-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .modal-fee-table th,
+  .modal-fee-table td {
+    padding: 10px;
+    border: 1px solid var(--accent-color);
+    text-align: left;
+  }
+  
+  .modal-fee-table th {
+    background-color: var(--secondary-color);
+    color: white;
+  }
+  
+  @media print {
+    .data-btn,
+    .data-btn-print,
+    .data-btn-view {
+      display: none;
+    }
+  }
+  .view-button{
+    background-color: #8748d0;
+  }  

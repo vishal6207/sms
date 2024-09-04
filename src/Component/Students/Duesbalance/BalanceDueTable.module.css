@@ -1,0 +1,114 @@
+.container {
+    padding: 20px;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.subTitle {
+    font-size: 16px;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.actionButton {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.actionButton:hover {
+    background-color: var(--secondary-color);
+}
+
+.totalDue {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 20px;
+    }
+
+    .subTitle {
+        font-size: 14px;
+    }
+
+    .buttonContainer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .actionButton {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .totalDue {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 18px;
+    }
+
+    .subTitle {
+        font-size: 12px;
+    }
+
+    .actionButton {
+        padding: 8px 16px;
+        font-size: 11px;
+    }
+
+    .totalDue {
+        font-size: 14px;
+    }
+}
+/* print.css */
+
+/* Hide elements that you don't want to appear in the printout */
+@media print {
+  
+
+    #printSection, #printSection * {
+        visibility: visible;
+    }
+
+    #printSection {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+   
+    @page {
+        margin: 0;
+    }
+}
+
