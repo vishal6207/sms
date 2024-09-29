@@ -1,0 +1,153 @@
+.atd{
+    width: 100% !important; 
+}
+.attendance-container {
+    margin: 40px auto;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    border-radius: 30px 0 0 0;
+    min-height: 100vh;
+}
+
+/* Card Styling */
+.summary-card, .calendar-card {
+    background: var(--secondary-color);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.summary-card:hover, .calendar-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Title Styling */
+.summary-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+/* Attendance Box */
+.attendance-box {
+    background: var(--background-color);
+    border-radius: 10px;
+    padding: 15px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.attendance-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Color Variants */
+.bg-present {
+    background:  #fff;
+    color: var( --primary-color);
+}
+
+.bg-absent {
+    background:  #fff;
+    color: var( --primary-color);
+}
+
+.bg-late {
+    background:  #fff;
+    color: var( --primary-color);
+}
+
+.bg-halfday {
+    background:  #fff;
+    color: var( --primary-color);
+}
+
+.highlight {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-top: 10px;
+}
+
+.calendar-card {
+    background: var(--background-color);
+}
+
+.calendar-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 12px 12px 0 0;
+    color: #fff;
+}
+
+.calendar-body {
+    padding: 20px;
+    background-color: #fff;
+}
+
+
+.react-calendar {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.react-calendar__tile {
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.react-calendar__tile--now {
+    background: #f39c12;
+    color: #fff;
+}
+
+.react-calendar__tile--active {
+    background: var(--primary-color);
+    color: #fff;
+    font-weight: bold;
+}
+
+.present-day {
+    background-color: var(--accent-color) !important;
+    color: #fff !important;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.absent-day {
+    background-color: #dc3545 !important;
+    color: #fff !important;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+    background-color: #f5c6cb;
+    color: #000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .attendance-container {
+        padding: 0 20px;
+    }
+
+    .summary-title {
+        font-size: 1.3rem;
+    }
+}
+

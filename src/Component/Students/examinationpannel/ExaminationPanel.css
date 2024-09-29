@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
+:root {
+  --text-color: #09060e;
+  --background-color: #f7f4fb;
+  --primary-color: #8748d0;
+  --secondary-color: #b588e8;
+  --accent-color: #954ce7;
+}
+
+/* body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+} */
+
+.examination-panel {
+  padding: 25px;
+  max-width: var(--max-screen);
+  margin: 0 auto;
+  background-color: var(--background-color);
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.student-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.student-name {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+  font-family: 'Satisfy', cursive;
+}
+
+.student-info {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.year-selector {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.year-btn {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: 1px solid var(--accent-color);
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  margin: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.year-btn.active {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.year-btn:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+.result-summary {
+  margin-bottom: 25px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 18px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.result-summary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.result-header h2 {
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 1.6rem;
+}
+
+.result-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.result-info span {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.result-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.view-btn,
+.download-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: 1px solid var(--accent-color);
+  padding: 8px 15px;
+  font-size: 0.85rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.view-btn:hover,
+.download-btn:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.details-section {
+  margin-top: 18px;
+}
+
+.details-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.details-table th,
+.details-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  font-size: 0.85rem;
+}
+
+.details-table th {
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 0.95rem;
+}
+
+.details-table td {
+  background-color: var(--background-color);
+}
+
+.details-table tr:nth-child(even) td {
+  background-color: #f0f0f0;
+}
+
+.details-table tr:hover {
+  background-color: #e0e0e0;
+}

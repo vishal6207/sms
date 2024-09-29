@@ -1,0 +1,156 @@
+.teacherLeaveContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap onto new lines */
+    gap: 20px; /* Add spacing between cards */
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 20px);
+    text-align: center;
+}
+
+.cardIcon {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardCount {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.cardLabel {
+    font-size: 16px;
+    color: #666;
+}
+
+.leaveTabsContainer {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px; 
+    margin-bottom: 20px;
+}
+
+.leaveTab {
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    background-color: #eee;
+}
+
+.activeLeaveTab {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.leaveTableContainer {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableTh, .tableTd {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.tableTh {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.noLeavesMessage {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+}
+
+.actionButton {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.approveButton {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.rejectButton {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .card {
+        width: calc(33.333% - 20px); /* 3 cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); /* 2 cards per row */
+    }
+    
+    .leaveTabsContainer {
+        flex-direction: column; /* Stack tabs vertically */
+    }
+    
+    .leaveTab {
+        width: 100%; /* Full width tabs on smaller screens */
+        text-align: center; /* Center text for tabs */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* 1 card per row */
+    }
+    
+    .cardIcon {
+        font-size: 24px; /* Smaller icon size on very small screens */
+    }
+    
+    .cardCount {
+        font-size: 20px; /* Smaller count text */
+    }
+    
+    .cardLabel {
+        font-size: 14px; /* Smaller label text */
+    }
+    
+    .actionButton {
+        padding: 6px 12px; /* Smaller buttons */
+        font-size: 12px; /* Smaller font size */
+    }
+}

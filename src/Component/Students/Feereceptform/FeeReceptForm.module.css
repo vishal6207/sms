@@ -1,0 +1,179 @@
+.feeReceiptContainer {
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    max-width: var(--max-screen);
+    margin-top: var(--margin-top);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.title {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    text-align: center;
+    margin:20px;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.feeFormContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+.feeFormGroup {
+    flex: 1 1 220px;
+    display: flex;
+    flex-direction: column;
+}
+
+.feeFormGroup label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.feeFormGroup input,
+.feeFormGroup select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.feeButtonGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.feeButtonGroup button {
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1 1 auto;
+    margin: 5px;
+}
+
+.feeButtonGroup button:hover {
+    background-color: var(--secondary-color);
+}
+
+.feeTableContainer {
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+.feeTableTitle {
+    background-color:var(--primary-color);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+    border-radius: 4px 4px 0 0;
+    font-size: 1.2em;
+}
+
+.feeTable {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px; /* Ensures tables don't become too small */
+}
+
+.feeTable th,
+.feeTable td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+.feeTable th {
+    background-color: #f2f2f2;
+    font-size: 1em;
+}
+
+.feeActionButtons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.feeActionButtons button {
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1 1 auto;
+    margin: 5px;
+}
+
+.feeActionButtons button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .feeFormContainer {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .feeFormGroup {
+        flex: 1 1 100%;
+    }
+
+    .feeButtonGroup {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .feeActionButtons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .feeTableTitle,
+    .feeTable th,
+    .feeTable td {
+        font-size: 0.9em;
+    }
+
+    .title {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .feeFormContainer {
+        gap: 10px;
+    }
+
+    .feeButtonGroup button,
+    .feeActionButtons button {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    .feeTableTitle,
+    .feeTable th,
+    .feeTable td {
+        font-size: 0.8em;
+    }
+
+    .title {
+        font-size: 1.1em;
+    }
+}

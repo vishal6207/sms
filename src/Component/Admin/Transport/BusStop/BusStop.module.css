@@ -1,0 +1,186 @@
+.maincontainerbusstop{
+    width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: var(--background-color);
+  margin-bottom: 20px;
+  margin-top: 30px;;
+  font-style: satisfy;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.busStopContainer {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: white;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.busStopHeader {
+    background-color:var(--primary-color);
+    padding: 15px;
+    width: 80%;
+    max-width: 200px;
+    margin: 0 auto;
+    font-family: "Satisfy", cursive;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
+}
+
+.busStopTitle {
+    
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+
+.busStopWindowControls button {
+    background-color: purple;
+    color: white;
+    border: none;
+    padding: 5px;
+    margin-left: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.busStopForm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.busStopFormGroup {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.busStopLabel {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.busStopInput,
+.busStopSelect {
+    padding: 10px 20px;  
+    border-radius: 10px;
+    width: 100%;
+    
+    margin-bottom: 10px;
+    background-color: var(--background-color);  
+    color: #000000;  
+    font-size: 16px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.8); 
+}
+
+.busStopInput,
+.busStopSelect::placeholder{
+    color: #7f8c8d; 
+}
+
+
+.busStopInput:focus{
+    background-color: #ffffff;  
+    outline: 3px solid var(--secondary-color);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+}
+.busStopSelect:focus{
+    background-color: #ffffff;  
+    outline: 3px solid var(--secondary-color);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+}
+
+.busStopTimeInput {
+    padding: 10px 20px;  
+    border-radius: 10px;
+    width: 100%;
+    
+    margin-bottom: 10px;
+    background-color: var(--background-color);  
+    color: #000000;  
+    font-size: 16px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.8); 
+}
+
+.busStopTimeInput::placeholder{
+    color: #7f8c8d; 
+}
+.busStopTimeInput:focus{
+    background-color: #ffffff;  
+    outline: 3px solid var(--secondary-color);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+}
+
+
+
+.busStopTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.busStopTableHeader {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+}
+
+.busStopTableData {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    gap: 10px;
+
+}
+
+
+
+.busStopButtonGroup {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: var(--background-color);
+    border-radius: 0 0 5px 5px;
+}
+
+.busStopCreateButton,
+.busStopUpdateButton,
+.busStopPrintButton,
+.busStopDeleteButton,
+.busStopEditButton
+ {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.busStopCreateButton:hover,
+.busStopUpdateButton:hover,
+.busStopPrintButton:hover,
+.busStopDeleteButton:hover,
+.busStopEditButton:hover 
+{
+    background-color: var(--secondary-color);
+}

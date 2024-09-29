@@ -1,0 +1,105 @@
+:root {
+    --text-color: #09060e;
+    --background-color: #f7f4fb;
+    --primary-color: #8748d0;
+    --secondary-color: #b588e8;
+    --accent-color: #954ce7;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+  }
+  
+  .fee-panel {
+    max-width: var(--max-screen);
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 12px;
+    background: linear-gradient(to bottom right, var(--secondary-color), var(--primary-color));
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    
+  }
+  
+  .fee-panel-title {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+  
+  .fee-table-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .fee-card {
+    background-color: #fff;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .fee-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .fee-info {
+    text-align: center;
+  }
+  
+  .fee-name {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  .fee-amount {
+    color: var(--text-color);
+    font-size: 18px;
+  }
+  
+  .status-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  
+  .paid .status-badge {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  .pending .status-badge {
+    background-color: #ff9800;
+    color: #fff;
+  }
+  
+  .pay-button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    color: #fff;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s;
+  }
+  
+  .pay-button:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+  }
+  

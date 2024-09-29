@@ -1,0 +1,156 @@
+/* General Styling */
+.weeklyTimetableContainer {
+  min-height: 100vh;
+  margin: auto;
+  padding: 20px;
+  background: #f4f4f9;
+  border-radius: 30px 0 0 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Day Navigation Styling */
+.dayNavigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.navButton, .editButton {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.navButton:hover, .editButton:hover {
+  background: #0056b3;
+}
+
+.dayHeading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  flex-grow: 1;
+  margin: 0 20px;
+}
+
+/* Daily Timetable Styling */
+.dailyTimetable {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table th, .table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table th {
+  background: var(--primary-color);
+  color: #fff;
+  font-weight: 600;
+}
+
+.table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.table td[contenteditable] {
+  cursor: pointer;
+}
+
+/* No Classes Text Styling */
+.noClassesText {
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .weeklyTimetableContainer {
+    width: 95%;
+    padding: 15px;
+  }
+  
+  .dayHeading {
+    font-size: 1.4rem;
+  }
+
+  .table th, .table td {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dayNavigation {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navButton, .editButton {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .dayHeading {
+    margin: 10px 0;
+    font-size: 1.3rem;
+  }
+
+  .table th, .table td {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .dayHeading {
+    font-size: 1.2rem;
+  }
+
+  .table th, .table td {
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+
+  .navButton, .editButton {
+    padding: 8px 12px;
+  }
+
+  .noClassesText {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .dayHeading {
+    font-size: 1.1rem;
+  }
+
+  .table th, .table td {
+    padding: 6px;
+    font-size: 0.8rem;
+  }
+
+  .navButton, .editButton {
+    padding: 6px 10px;
+  }
+}

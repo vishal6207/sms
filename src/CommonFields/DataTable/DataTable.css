@@ -1,0 +1,104 @@
+.acs-dyn-table .data-table-section {
+    overflow-x: auto;
+    background-color: var(--background-color);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    overflow: hidden; 
+}
+
+.acs-dyn-table .video-sec-width {
+    width: 100px;
+}
+
+.acs-dyn-table .heading-h1 {
+    font-size: clamp(16px, 4vw, 24px);
+    color: var(--primary-color);
+    font-weight: 600;
+    font-family: var(--font-family);
+    line-height: clamp(20px, 4vw, 28px);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.acs-dyn-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: auto; 
+}
+
+.acs-dyn-table th, .acs-dyn-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.acs-dyn-table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+}
+
+.acs-dyn-table td {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.acs-btn-action, .acs-btn-select-row {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.acs-btn-action:hover, .acs-btn-select-row:hover {
+    background-color: var(--secondary-color);
+}
+
+.acs-dyn-table .table-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+
+@media (max-width: 768px) {
+    .acs-dyn-table .heading-h1 {
+        font-size: clamp(14px, 4vw, 18px);
+    }
+
+    .acs-dyn-table th, .acs-dyn-table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .acs-btn-action, .acs-btn-select-row {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .acs-dyn-table .heading-h1 {
+        width: 100%;
+        font-size: clamp(12px, 4vw, 16px);
+    }
+
+    .acs-dyn-table th, .acs-dyn-table td {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    .acs-btn-action, .acs-btn-select-row {
+        padding: 6px 12px;
+        font-size: 10px;
+    }
+}

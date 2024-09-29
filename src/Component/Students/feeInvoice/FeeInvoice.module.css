@@ -1,0 +1,161 @@
+ 
+
+.invoiceContainer {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 30px;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+.schoolInfo {
+  margin-left: 20px;
+}
+
+.schoolInfo h1 {
+  font-size: 24px;
+  color: var(--primary-color);
+  margin: 0;
+  font-weight: 700;
+}
+
+.schoolInfo p {
+  margin: 5px 0;
+  color: var(--secondary-color);
+  font-size: 14px;
+}
+
+.invoiceTitle {
+  text-align: center;
+  font-size: 28px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.details {
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.row strong {
+  color: #333;
+}
+
+.feeTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.feeTable th,
+.feeTable td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.feeTable th {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: normal;
+}
+
+.feeTable td {
+  background-color: #f9f9f9;
+}
+
+.totalRow td {
+  font-weight: bold;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+  border-top: 2px solid var(--primary-color);
+  padding-top: 20px;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.signature {
+  text-align: right;
+}
+
+.signature span:first-child {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+ 
+@media print {
+  .invoiceContainer {
+    box-shadow: none;
+    border: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .schoolInfo {
+    margin-left: 0;
+  }
+
+  .row {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .feeTable th, .feeTable td {
+    font-size: 14px;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .signature {
+    margin-top: 10px;
+    text-align: center;
+  }
+}

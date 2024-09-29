@@ -1,0 +1,92 @@
+.mainc {
+  /* padding-top: 300px; */
+  font-family: 'Poppins', sans-serif !important;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: relative;
+  padding-top: 5rem;
+     
+}
+
+.feature-area {
+  padding-bottom: 100px;
+  /* margin-top: -250px; */
+}
+
+.feature-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.feature-title .title {
+  margin-bottom: 30px;
+  display: inline-block;
+  background-image: linear-gradient(90deg, rgb(102, 52, 230) 0%, rgb(189, 107, 223) 100%);
+  color: #fff;
+  padding: 16px 60px;
+  border-radius: 30px;
+}
+
+.feature-title p {
+  font-size: 20px;
+  color: #131313;
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+
+.feature-box-one {
+  background-color: #fff;
+  box-shadow: 0 0 18px -3px rgba(6, 16, 35, .08);
+  border-radius: 10px;
+  text-align: center;
+  padding: 30px 15px;
+  margin-bottom: 30px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.feature-box-one .icon {
+  width: 90px;
+  height: 90px;
+  border: 5px solid #9853e1;
+  display: block;
+  padding-top: 5px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+}
+
+.feature-box-one h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.feature-box-one h3::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background: #884ae3;
+  transform: translateX(-50%);
+}
+
+/* New Fade-In Animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}

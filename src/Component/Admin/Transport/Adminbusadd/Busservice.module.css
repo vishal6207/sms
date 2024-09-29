@@ -1,0 +1,264 @@
+.appcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+  }
+  
+  .app-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .app-content {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .bus-list-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    min-height: 400px;
+  }
+  
+  .bus-list-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .bus-list-icon {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .bus-list-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .bus-list-add-icon {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .bus-list-items {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    overflow-y: auto;
+  }
+  
+  .bus-list-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+  }
+  
+  .bus-list-item.selected {
+    background-color: #e0e0e0;
+  }
+  
+  .bus-list-item-label {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .bus-list-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .bus-list-toggle-icon {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .bus-details-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    min-height: 400px;
+  }
+  
+  .bus-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .bus-details-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .bus-details-icon {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .bus-details-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .bus-details-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .bus-details-info-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .bus-details-info-item-inner {
+    display: flex;
+    align-items: center;
+  }
+  
+  .bus-details-info-icon {
+    font-size: 16px;
+    color: #333;
+    margin-left: 10px;
+  }
+  
+  .bus-details-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .bus-details-action-icon {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .bus-route-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    min-height: 400px;
+  }
+  
+  .bus-route {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .bus-route-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .bus-route-icon {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .bus-route-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .bus-route-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .bus-route-action-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .bus-route-map {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .bus-route-stop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .bus-route-stop-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .bus-route-stop-item.destination {
+    color: red;
+  }
+  
+  .bus-route-stop-icon {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .bus-route-stop-label {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .bus-route-stop-time-icon {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .bus-route-stop-time {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .bus-route-stop-add-icon {
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .bus-route-stop-delete-icon {
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+  }

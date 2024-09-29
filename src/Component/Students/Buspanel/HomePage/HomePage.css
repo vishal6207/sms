@@ -1,0 +1,204 @@
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: aliceblue;
+  padding: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  width: 100%;
+}
+
+.header-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  margin-top: -30px;
+}
+
+.school-logo {
+  width: 80%;
+  max-width: 280px;
+  height: auto;
+}
+
+.school-info {
+  text-align: center;
+  width: 100%;
+}
+
+.school-info h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.school-info h2 {
+  font-size: 1.25rem;
+  margin: 5px 0;
+}
+
+.school-info p {
+  font-size: 0.9rem;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.school-building {
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.login-box h3 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.login-box h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.login-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.login-button {
+  flex: 1;
+  padding: 8px;
+  font-size: 0.7rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #ddd;
+}
+
+.forgot-password {
+  text-align: center;
+  margin: 15px 0;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.register-section {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.register-section p {
+  margin: 10px 0;
+}
+
+.register-button {
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: gray;
+  cursor: pointer;
+  font-size: 0.7rem;
+}
+
+.register-button:hover {
+  background-color: #ddd;
+}
+
+.INDF {
+  margin-top: 15px;
+  font-style: italic;
+  color: gray;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: x-small;
+}
+
+/* Responsive Styles */
+@media (min-width: 600px) {
+  .header-section {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+  }
+
+  .school-info {
+    text-align: right;
+  }
+
+  .main-section {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+  }
+
+  .login-box {
+    margin-left: 60px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .homepage-container {
+    padding: 40px;
+  }
+
+  .header-section {
+    padding: 20px;
+  }
+
+  .school-info h1 {
+    font-size: 1.3rem;
+  }
+
+  .school-info h2 {
+    font-size: 1.2rem;
+  }
+
+  .main-section {
+    width: 80%;
+  }
+
+  .school-building {
+    max-width: 450px;
+  }
+
+  .login-box {
+    max-width: 400px;
+  }
+}

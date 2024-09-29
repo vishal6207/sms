@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.limiter {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-login100 {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.container-login100::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.wrap-login100 {
+  width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 55px 55px 37px;
+  background: linear-gradient(to bottom, #7579ff, #b224ef);
+}
+
+.login100-form {
+  width: 100%;
+}
+
+.login100-form-logo {
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 auto 30px;
+}
+
+.login100-form-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  color: #fff;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+}
+
+.p-b-34 {
+  padding-bottom: 34px;
+}
+
+.p-t-27 {
+  padding-top: 27px;
+}
+
+.wrap-input100 {
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.input100 {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 16px;
+  color: #fff !important;
+  line-height: 1.2;
+  display: block;
+  width: 100%;
+  height: 45px;
+  background: transparent;
+  padding: 0 5px 0 38px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.24);
+}
+
+.label100 {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 19px;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.label-checkbox100 {
+    font-family: 'Poppins';
+    font-size: 13px;
+    color: #fff;
+    line-height: 1.2;
+    
+    position: relative;
+    padding-left: 10px;
+    padding-bottom: 29px;
+    cursor: pointer;
+    
+}
+
+
+
+.input100:focus + .label100,
+.input100:valid + .label100 {
+  top: 0;
+  left: 10px;
+  font-size: 16px;
+  color: #ffffff;
+ 
+  
+}
+
+.focus-input100 {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.contact100-form-checkbox {
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 35px;
+}
+
+.container-login100-form-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.login100-form-btn {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #b224ef;
+  line-height: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  min-width: 120px;
+  height: 50px;
+  border-radius: 25px;
+  background: linear-gradient(to bottom, #7579ff, #b224ef);
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s;
+}
+
+.login100-form-btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: all 0.4s;
+}
+
+.txt1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  color: #e5e5e5;
+  line-height: 1.5;
+}
+
+.txt1 a {
+  color: #b224ef;
+  text-decoration: none;
+}
+

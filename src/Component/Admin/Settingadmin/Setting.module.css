@@ -1,0 +1,179 @@
+.settingContainer1 {
+ 
+    width: 100%;
+    
+    max-height: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: var(--background-color);
+    border-radius: 30px 0 0 0;min-height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+.settingContainer {
+ 
+  width: 80%;
+  height: 100%;
+  max-height: 400px;
+  margin: 0 auto;
+  padding: 50px;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .profileSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .profileImageContainer {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+
+  
+  }
+  
+  .profileImage {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .imageInstructions {
+    font-size: 12px;
+    color: #777;
+    margin-top: 10px;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .changePasswordButton,
+  .editProfileButton {
+    padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  }
+  
+  .changePasswordButton:hover,
+  .editProfileButton:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .profileInfoContainer {
+    flex: 2;
+    margin: 20px;
+    max-width: 400px;
+   
+   
+  }
+  
+  .profileInfoHeading {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .profileDetailsList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .profileLabel {
+    font-weight: bold;
+  }
+  
+
+
+.modalOverlay {
+    position: fixed;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modalContent {
+    margin-top: 50px;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+    position: relative;
+  }
+  
+  .modalHeading {
+    margin-bottom: 20px;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .modalInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+  }
+  
+  .saveButton {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    bottom: 10px; /* Adjust as needed */
+  right: 10px; 
+  }
+  
+  .saveButton:hover {
+    background-color: var(--secondary-color);
+  }
+
+  .fileInput {
+    display: block;
+    margin: 10px auto;
+    cursor: pointer;
+  }
+
+  .uploadIcon {
+    font-size: 24px;
+    color: var(--primary-color);
+    cursor: pointer;
+   margin-bottom: 10px;
+  }
+  
+  .uploadIcon:hover {
+    color: var(--secondary-color);
+  }
+  

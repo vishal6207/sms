@@ -1,0 +1,179 @@
+.vehicleMasterContainer {
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  width: 100%;
+   min-height: 100vh;
+  margin: auto;
+  background-color: var(--background-color);
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.vehicleMasterContainer:hover {
+  transform: translateY(-5px);
+}
+
+.vehicleMasterHeader {
+ 
+  color: black;
+  padding: 20px;
+  
+  margin: 0 auto;
+  font-weight: 600;
+ 
+ 
+  font-size: 2rem;
+ 
+}
+
+.vehicleForm {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.vehicleForm label {
+  font-weight: 500;
+  color: #6a11cb;
+}
+
+.vehicleForm input,
+.vehicleForm select {
+  border-radius: 8px;
+  border: 1px solid #cccccc;
+  padding: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.vehicleForm input:focus,
+.vehicleForm select:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 8px rgba(106, 17, 203, 0.2);
+}
+
+.formRow {
+  margin-bottom: 20px;
+}
+
+.imageSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.imagePreview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.previewImage {
+  width: 100%;
+  max-width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.placeholderImage {
+  width: 100%;
+  max-width: 250px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  color: #6c757d;
+}
+
+.buttonContainer {
+  background-color: #ffffff;
+  width: 100%;
+  border-radius: 12px !important;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.submitButton {
+  background-color: var(--primary-color);
+  border-color: #6c757d;
+  margin: 10px;
+  width: 100%;
+  padding: 10px;
+}
+
+.submitButton:hover {
+  background-color: var(--accent-color);
+}
+
+.cancelButton {
+  background-color: #030a0f;
+  border-color: #6c757d;
+  margin: 10px;
+  width: 100%;
+  padding: 10px;
+}
+
+.closeButton {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  margin: 10px;
+  width: 100%;
+  padding: 10px;
+}
+
+.actionButton {
+  margin-right: 5px;
+}
+
+.tableCustom {
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .vehicleMasterContainer {
+    padding: 15px;
+  }
+
+  .vehicleMasterHeader {
+    font-size: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .vehicleForm {
+    padding: 15px;
+  }
+
+  .imagePreview {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .previewImage {
+    max-width: 200px;
+    height: auto;
+  }
+
+  .placeholderImage {
+    max-width: 200px;
+  }
+
+  .buttonContainer {
+    font-size: 1rem;
+  }
+
+  .submitButton, .cancelButton, .closeButton {
+    width: 100%;
+    margin: 5px 0;
+  }
+}

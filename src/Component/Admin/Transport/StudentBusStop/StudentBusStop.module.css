@@ -1,0 +1,138 @@
+
+
+.studentBusStopContainer1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: var(--background-color);
+    margin-bottom: 20px;
+    margin-top: 30px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+.studentBusStopContainer {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: white;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .studentBusStopContainer2{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: white;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .studentBusStopTitle1 {
+    background-color: var(--primary-color);
+    padding: 2px;
+    width: 40%;
+    max-width: 300px;
+    margin: 0 auto;
+    font-family: "Satisfy", cursive;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 12px;
+    font-size: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .studentBusStopTitle {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Satisfy', cursive;
+    font-size: 36px;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .studentBusStopFormContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  .studentBusStopInputGroup {
+    margin-bottom: 15px;
+    width: 45%;
+    
+  }
+  
+  .studentBusStopLabel {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .studentBusStopInput, .studentBusStopDropdown {
+    width: 100%;
+
+    border-radius: 8px;
+    border: 1px solid #cccccc;
+    padding: 10px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .studentBusStopTableContainer {
+    margin-top: 20px;
+    max-width: 1250px;
+  }
+  
+  .studentBusStopTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .studentBusStopTh, .studentBusStopTd {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .studentBusStopTh {
+    background-color: var(--primary-color);
+    color: white;
+    
+  }
+  
+  .studentBusStopTd {
+    background-color: var(--background-color);
+    font-size: 14px;
+  }
+  
+  .studentBusStopButtonContainer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .studentBusStopButton {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .studentBusStopButton:hover {
+    background-color: var(--secondary-color);
+  }
+  

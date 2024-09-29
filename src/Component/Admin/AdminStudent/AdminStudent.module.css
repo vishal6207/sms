@@ -1,0 +1,223 @@
+.adminContainer {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    max-width: 80%;
+    margin: auto;
+}
+
+.header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+.showStudents{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: var(--background-color);
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.tabButton {
+    padding: 10px 20px;
+    background-color: #e0e0e0;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.activeTab {
+    background-color: var(--secondary-color);
+    border-bottom: 3px solid green;
+    color: white;
+    font-weight: bold;
+}
+
+.subHeader {
+   
+  color: black;
+  padding: 20px;
+  margin: 0 auto;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30vh;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: var(--background-color);
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+.actions1 {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 20px ;
+}
+
+.searchInput {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+    max-width: 300px;
+}
+
+.studentTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableHeader {
+    background-color: #f0f0f0;
+}
+
+.tableHeaderCell {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-weight: bold;
+}
+
+.tableRow {
+    background-color: white;
+}
+
+.tableCell {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.noData {
+    text-align: center;
+    padding: 10px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.paginationButton {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+    background-color: #f0f0f0;
+}
+
+.paginationButton:disabled {
+    cursor: not-allowed;
+    background-color: #e0e0e0;
+}
+
+.currentPage {
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.actionButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    margin: 0 15px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.actionButton:hover {
+    transform: scale(1.05);
+}
+
+.icon {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.actionButton:nth-child(1) {
+    background-color: var(--background-color);
+    color: black;
+}
+
+.actionButton:nth-child(2) {
+    background-color: var(--background-color);
+    color: rgb(215, 68, 68);
+}
+
+
+/* AdminStudent.module.css */
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 20px;
+    width: 300px;
+    max-width: 100%;
+}
+
+.popupContent {
+    text-align: center;
+}
+
+.popupInput {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.popupActions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.popupButton {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.popupButton:hover {
+    background-color: var(--secondary-color);
+}

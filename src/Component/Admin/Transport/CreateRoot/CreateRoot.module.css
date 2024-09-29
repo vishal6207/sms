@@ -1,0 +1,167 @@
+
+
+.mainconatainerroute{
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: var(--background-color);
+  margin-bottom: 20px;
+  margin-top: 30px;;
+  font-style: satisfy;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.createRootContainer {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: white;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cardHeader {
+    margin-bottom: 10px;
+  }
+  
+  .createRootHeader {
+    background-color: #ffffff;
+    color: var(--primary-color);
+    padding: 20px;
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+    font-family: "Satisfy", cursive;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cardBody {
+    margin-bottom: 20px;
+  }
+  
+  .createRootLabel {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .createRootInput {
+    border-radius: 8px;
+  border: 1px solid #cccccc;
+  padding: 10px;
+  transition: border-color 0.3s ease;
+  margin-bottom: 20px;
+   
+  }
+
+  .createRootInput::placeholder{
+    color: #7f8c8d; 
+  }
+  
+  .createRootInput:focus{
+    background-color: #ffffff;  
+    outline: 3px solid var(--secondary-color);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+  }
+
+  .createRootTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    
+  }
+  
+  .createRootTable th,
+  .createRootTable td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .createRootTable th {
+    background: var(--primary-color);
+    color: var(--background-color);
+  }
+  
+  .actionsHeader {
+    width: 200px; /* Adjust width as needed */
+  }
+  
+  .actionsCell {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .editButton {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .deleteButton {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .editButton:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .deleteButton:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .cardFooter {
+
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .updateButton {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .createButton {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .updateButton:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .createButton:hover {
+    background-color: var(--secondary-color);
+  }
+  
+
+  

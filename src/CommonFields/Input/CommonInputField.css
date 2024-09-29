@@ -1,0 +1,48 @@
+.common-input-field .default-form-control{
+  color: var(--text-color);
+  font: normal normal 600 20px/20px var(--font-family);
+  font-size: clamp(10px, 4vw, 18px);
+  line-height: clamp(13px, 4vw, 20px);
+}
+.common-input-field .default-form-control::placeholder{
+  color: gray;
+  font: normal normal 500 20px/20px var(--font-family);
+  font-size: clamp(10px, 4vw, 15px);
+  line-height: clamp(13px, 4vw, 20px);
+}
+.common-input-field .default-form-control:read-only{
+  opacity: 0.5;
+}
+.common-input-field .common-input-sec{
+display:flex;
+align-items: center;
+justify-content: center;  
+}
+.common-input-field .readonly-icon{
+  padding: 0 5px 0 5px;
+
+}
+.common-input-field .form-label{
+  color: var(--text-color);
+  font: normal normal 600 20px/20px var(--font-family);
+  font-size: clamp(10px, 4vw, 15px);
+  line-height: clamp(13px, 4vw, 18px);
+}
+.common-input-field  .invalid-feedback{
+  font: normal normal 500 20px/20px var(--font-family);
+  font-size: clamp(8px, 4vw, 12px);
+  line-height: clamp(12px, 4vw, 15px);
+
+}
+.common-input-field  .valid-feedback{
+  font: normal normal 500 20px/20px var(--font-family);
+  font-size: clamp(8px, 4vw, 12px);
+  line-height: clamp(12px, 4vw, 15px);
+
+}
+.common-input-field  .form-text{
+  font: normal normal 500 20px/20px var(--font-family);
+  font-size: clamp(8px, 4vw, 12px);
+  line-height: clamp(12px, 4vw, 15px);
+  color: gray;
+}

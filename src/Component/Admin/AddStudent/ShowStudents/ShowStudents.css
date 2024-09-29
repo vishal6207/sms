@@ -1,0 +1,49 @@
+.student-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: var(--background-color);
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .studentfeedbackform {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+
+  
+  .student-list {
+    margin-top: 20px;
+  }
+  
+  .h1-head {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+  }
+  
+  .student-list h3 {
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+  .ShowButton1 {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .ShowButton1:hover{
+    background-color: var(--secondary-color);
+  }
+  

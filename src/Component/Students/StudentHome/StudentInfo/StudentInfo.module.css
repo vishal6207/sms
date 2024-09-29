@@ -1,0 +1,69 @@
+
+
+.studentCard {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: auto;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.profileImage {
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+}
+
+.studentDetails ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.studentDetails li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  align-items: center;
+}
+
+.studentDetails li i {
+  margin-right: 8px;
+  color: var(--primary-color);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .studentCard {
+    padding: 15px;
+  }
+  
+  .studentDetails li {
+    font-size: 0.9rem;
+  }
+
+  .profileImage {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .studentCard {
+    padding: 10px;
+  }
+  
+  .studentDetails li {
+    font-size: 0.8rem;
+  }
+
+  .profileImage {
+    width: 35px;
+    height: 35px;
+  }
+
+  .studentDetails li i {
+    font-size: 0.9rem;
+  }
+}

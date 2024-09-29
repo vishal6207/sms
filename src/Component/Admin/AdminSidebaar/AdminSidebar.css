@@ -1,0 +1,165 @@
+/* Ensure the main container covers the full viewport height */
+.main-container {
+   
+     
+  }
+  
+  /* Sidebar styles */
+  .sidebar {
+    background: rgb(0, 7, 61);
+    color: white;
+    height: auto;  
+    overflow-y: auto;  
+  }
+  
+  /* Content area styles */
+  main {
+    flex: 1;  
+  }
+  
+  /* Title styling */
+  .title {
+    font-size: 3rem;
+    display: grid;
+    place-items: center;
+  }
+
+  .submenue{
+    display: flex;
+    margin-left: 20px;
+    gap: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    color: white;
+    padding: 8px;
+  }
+  .submenue_item{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+  
+  /* Top section styling */
+  .top_section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10px;
+  }
+  
+  /* Logo styling */
+  .logo {
+    font-size: 18px;
+    line-height: 0;
+  }
+  
+  /* Bars icon styling */
+  .bars {
+    width: 30px;
+    margin-right: 30px;
+    
+  }
+  
+  /* Hide element styling */
+  .hide {
+    display: none;
+  }
+  
+  /* Search box styling */
+  .search {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    height: 30px;
+    padding: 10px;
+  }
+  
+  .search input {
+    border: none;
+    margin-left: 10px;
+    border-radius: 5px;
+    background: rgb(238, 238, 238);
+    color: white;
+  }
+  
+  /* Routes styling */
+  .routes {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  /* Link styling */
+  .link {
+    display: flex;
+    color: white;
+    gap: 10px;
+    padding: 5px 10px;
+    border-right: 4px solid transparent;
+    transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  }
+  
+  /* .link:hover {
+    border-right: 4px solid white;
+    background: rgb(45, 51, 89);
+    transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    
+  } */
+  
+  .active {
+    border: 6px solid #73789d;
+    background: white;
+    color: black;
+    border-radius: 30px;
+    
+  }
+   
+  
+  /* Link text styling */
+  .link_text {
+    white-space: nowrap;
+    font-size: 15px;
+  }
+  
+  /* Menu styles */
+  .menu {
+    display: flex;
+    color: white;
+    padding: 5px 10px;
+    border-right: 4px solid transparent;
+    transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    justify-content: space-between;
+  }
+  
+  .menu_item {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Menu container styling */
+  .menu_container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menu_container .link {
+    padding-left: 20px;
+    border-bottom: #fff 0.5px solid;
+  }
+  
+  /* Code styling */
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  }
+  
+   
+  ul, li {
+    list-style: none;
+  }
+  
+  
+  a {
+    text-decoration: none;
+  }
+  

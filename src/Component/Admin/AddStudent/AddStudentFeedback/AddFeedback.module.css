@@ -1,0 +1,231 @@
+.studentfeedbackcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: var(--background-color);
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.titlefeedback {
+
+  color: black;
+  padding: 20px;
+  margin: 0 auto;
+  font-weight: 600;
+
+
+  font-size: 2rem;
+}
+
+.studentfeedbackform {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.feedbackLabel {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.feedbackSelect {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+
+.studentfeedbackdetails {
+  display: flex;
+
+  margin-top: 20px;
+}
+
+.studentfeedbackstudent {
+  width: 300px;
+  margin-right: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.studentfeedbackinfo {
+  height: 250px;
+  /* Fixed height for the student card */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Center content vertically */
+  align-items: center;
+  /* Center content horizontally */
+}
+
+.feedbackImg {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.feedbackParagraph {
+  margin-bottom: 5px;
+}
+
+.studentfeedbackfeedback {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow-y: auto;
+  /* Enable scrolling if content overflows */
+  max-height: 400px;
+  /* Optional: Set max-height for feedback container */
+}
+
+.studentfeedbackfeedbackform {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.feedbackTextarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+.feedbackUl {
+  list-style: none;
+  padding: 0;
+}
+
+.feedbackLi {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.studentfeedbackactions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.studentfeedbackactions button {
+  margin-left: 5px;
+}
+
+.feedbackButton {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.feedbackButton:hover {
+  background-color: var(--secondary-color);
+}
+
+/* for responsive to evry display */
+/* Base styles for responsiveness */
+@media (max-width: 768px) {
+  .studentfeedbackcontainer {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .studentfeedbackform {
+    width: 100%;
+  }
+
+  .studentfeedbackdetails {
+    flex-direction: column;
+  }
+
+  .studentfeedbackstudent {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .studentfeedbackinfo {
+    height: auto;
+    text-align: center;
+  }
+
+  .feedbackImg {
+    width: 80px;
+    height: 80px;
+  }
+
+  .studentfeedbackfeedback {
+    max-height: none;
+  }
+
+  .feedbackTextarea {
+    padding: 8px;
+  }
+
+  .studentfeedbackactions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .studentfeedbackactions button {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+
+  .feedbackButton {
+    width: 100%;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+  .studentfeedbackcontainer {
+    padding: 5px;
+  }
+
+  .studentfeedbackform {
+    width: 100%;
+  }
+
+  .studentfeedbackstudent {
+    padding: 10px;
+  }
+
+  .feedbackImg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .studentfeedbackfeedback {
+    padding: 10px;
+  }
+
+  .feedbackTextarea {
+    padding: 6px;
+  }
+
+  .feedbackButton {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+  }
+}

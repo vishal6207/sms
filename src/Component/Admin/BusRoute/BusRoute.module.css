@@ -1,0 +1,136 @@
+/* Main Container */
+.busRouteContainer {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+}
+
+.dropdown {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333333;
+}
+
+/* Timeline */
+.timeline {
+  margin-top: 20px;
+  position: relative;
+  padding-left: 40px;
+  border-left: 2px solid #e0e0e0;
+}
+
+.stopContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+  margin-left: -30px;
+}
+
+.stopCircle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.6);
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Progress circle styles */
+.stopCircle.completed {
+  background-color: #4CAF50;
+}
+
+.stopCircle.upcoming {
+  background-color: #f44336;
+}
+
+.stopInfo {
+  margin-left: 20px;
+}
+
+.stopName {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}
+
+.stopTime {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Hover Effects */
+.stopCircle:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Buttons */
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.viewButton, .saveButton, .resetButton {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.viewButton:hover, .saveButton:hover, .resetButton:hover {
+  background-color: #0056b3;
+}
+
+.addButton, .deleteButton {
+  background-color: #28a745;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.addButton:hover, .deleteButton:hover {
+  background-color: #218838;
+}
+
+.input {
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
