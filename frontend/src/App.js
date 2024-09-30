@@ -36,9 +36,9 @@ import Subjects from "./Component/Teacher/Subject/Subjects"
 import AddStudent from './Component/Admin/AddStudent/AddStudent'
 import Exams from "./Component/Teacher/Exams/Exams";
 import Attendence from "./Component/Students/Attendence/Attendence";
- import StudLayout from "./Component/Students/StudentLayout/StudLayout";
+import StudLayout from "./Component/Students/StudentLayout/StudLayout";
 import AdminLayout from "./Component/Admin/AdminLayout/AdminLayout";
- import AddTeacher from "./Component/Admin/AddTeachers/AddTeachers";
+import AddTeacher from "./Component/Admin/AddTeachers/AddTeachers";
 import TakeAttendence from "./Component/Teacher/TakeAttendence/TakeAttendence";
 import AdminSetting from "./Component/Admin/Settingadmin/AdminSetting";
 import Busservices from './Component/Admin/Transport/Adminbusadd/Busservices'
@@ -51,9 +51,6 @@ import Master from "./Component/Admin/Master/Master";
 
 function App() {
   const current_theme = localStorage.getItem("current_theme");
-  const [theme, setTheme] = useState(current_theme ? current_theme : "light");
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [role, setRole] = useState(null);
 
   useEffect(() => {
     localStorage.setItem("current_theme", theme);
@@ -66,73 +63,72 @@ function App() {
 
   return (
     <Router>
-     
       <Routes>
         {isLoggedIn ? (
           <>
             {role === "admin" && (
-              <Route path="/admin" element={<AdminLayout/>}>
-                  <Route index element={<Dashbord />}/>
-                  <Route path="master" element={<Master/>}/>
-                  <Route path="teacher" element={<AddTeacher/>}/>
-                  <Route path="student" element={<AdminStudent/>}/>
-                  <Route path="subject" element={<Subjects/>}/>
-                  <Route path="Attandance" element={<TakeAttendence/>}/>
-                  <Route path="Noticeboard" element={<TeacherNotice/>}/>
-                  <Route path="Timetable" element={<TimeTable/>}/>
-                  <Route path="sylabus" element={<StudentSylabus/>}/>
-                  <Route path="bus-service" element={<VehicleMaster/>}/>
-                  <Route path="setting" element={<AdminSetting />} />
-                   
+              <Route path="/admin" element={<AdminLayout />}>
+                <Route index element={<Dashbord />} />
+                <Route path="master" element={<Master />} />
+                <Route path="teacher" element={<AddTeacher />} />
+                <Route path="student" element={<AdminStudent />} />
+                <Route path="subject" element={<Subjects />} />
+                <Route path="Attandance" element={<TakeAttendence />} />
+                <Route path="Noticeboard" element={<TeacherNotice />} />
+                <Route path="Timetable" element={<TimeTable />} />
+                <Route path="sylabus" element={<StudentSylabus />} />
+                <Route path="bus-service" element={<VehicleMaster />} />
+                <Route path="setting" element={<AdminSetting />} />
+
               </Route>
             )}
             {role === "Student" && (
               <>
-                <Route path="/" element={<StudLayout/>}>
-                <Route  index element={<StudentHome />} />
-                <Route path="/timetable" element={<TimeTable />} />
-                <Route path="/examination" element={<ExaminationPanel />} />
-                <Route path="/fee-panel" element={<FeePanel />} />
-                <Route path="/workspace" element={<Workspace />} />
-                <Route path="/bus-route" element={<HomePage />} />
-                <Route path="/register" element={<RegistrationForm />} />
-                <Route path="*" element={<Navigate to="/" />} />
+                <Route path="/" element={<StudLayout />}>
+                  <Route index element={<StudentHome />} />
+                  <Route path="/timetable" element={<TimeTable />} />
+                  <Route path="/examination" element={<ExaminationPanel />} />
+                  <Route path="/fee-panel" element={<FeePanel />} />
+                  <Route path="/workspace" element={<Workspace />} />
+                  <Route path="/bus-route" element={<HomePage />} />
+                  <Route path="/register" element={<RegistrationForm />} />
+                  <Route path="*" element={<Navigate to="/" />} />
                 </Route>
               </>
-            )}  
+            )}
             {role === "Teacher" && (
               <Route path="/teacher" element={<Layout />}>
-                <Route index element={<StudentHome/>} />
+                <Route index element={<StudentHome />} />
                 <Route path="dashbord" element={<Dashbord />} />
                 <Route path="student" element={<StudentLayout />}>
-                <Route path="student" element={<AddStudent/>} />
+                  <Route path="student" element={<AddStudent />} />
                   <Route path="attendence" element={<Attendence />} />
                   <Route path="notice" element={<TeacherNotice />} />
                   <Route path="timetable" element={<Timetable />} />
                   <Route path="sylabus" element={<StudentSylabus />} />
-                  <Route path="subject" element={<Subjects/>} />
-                <Route path="notes" element={<Notes />} />
-                <Route path="exams" element={<Exams />} />
-                <Route path="mark" element={<TeacherUploadMarks />} />
-               
+                  <Route path="subject" element={<Subjects />} />
+                  <Route path="notes" element={<Notes />} />
+                  <Route path="exams" element={<Exams />} />
+                  <Route path="mark" element={<TeacherUploadMarks />} />
+
                 </Route>
 
                 <Route path="setting" element={<AdminSetting />} />
-                
-              
+
+
               </Route>
             )}
-{role === "Parent" && (
-  <Route path="/ParentDashboard" element={<Dashbord />}>
-    <Route path="sylabus" element={<StudentSylabus />} />
-  </Route>
-)}     
+            {role === "Parent" && (
+              <Route path="/ParentDashboard" element={<Dashbord />}>
+                <Route path="sylabus" element={<StudentSylabus />} />
+              </Route>
+            )}
           </>
         ) : (
           <Route path="*" element={<LoginForm onLogin={handleLogin} />} />
         )}
       </Routes>
-    
+
     </Router>
   );
 }
