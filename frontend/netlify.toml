@@ -1,6 +1,6 @@
 [build]
   base    = "frontend"         # Directory containing your frontend code
-  publish = "frontend/build"   # Adjust this if your build output is in a different directory
+  publish = "build"   # Adjust this if your build output is in a different directory
   command = "npm run build"    # Your build command, could be 'yarn build' or similar
 
 [[redirects]]
