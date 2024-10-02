@@ -46,9 +46,6 @@ import AdminStudent from "./Component/Admin/AdminStudent/AdminStuden";
 import Master from "./Component/Admin/Master/Master";
 
 
-
-
-
 function App() {
   const current_theme = localStorage.getItem("current_theme");
   const [role, setRole] = useState()

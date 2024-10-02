@@ -5,6 +5,7 @@ const router = Router()
 
 router.route("/login").post(loginAdmin)
 
+
 export default router
 
 
