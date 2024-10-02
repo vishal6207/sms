@@ -1,11 +1,37 @@
-.AdminOut{
-    display: flex;
-    min-height: 100vh;
-    width: 100%;
-    
+/* Ensure no extra scrollbars on the body */
+/* body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; 
+     
+  } */
   
-}
-.rightside-content{
-    background-color: #00073D;
-     width: 100%;
+  /* Container that holds both the sidebar and content */
+  .app-container {
+    display: flex;
+    height: 100vh; /* Full height */
+    overflow: hidden; /* Prevent any scrolling of the container itself */
+  }
+  
+  /* Sidebar styles */
+  .sidebar {
+    width: 200px; /* Fixed width for the sidebar */
+    background-color: #1a1a1d; /* Dark background */
+    color: white; /* Text color */
+    height: 100vh; /* Full height of viewport */
+    overflow-y: auto; /* Scroll only within the sidebar if needed */
+    position: sticky;
+    top: 0;
+  }
+  
+  /* Content area */
+  .content-container {
+    flex: 1; /* Takes remaining width */
+    padding: 20px;
+    height: 100vh; /* Full height of viewport */
+    overflow-y: auto; /* Scroll only the content */
+    background-color: #f8f9fa;
+  }
+  .no-scroll {
+    overflow: hidden; /* Prevent body scrolling */
 }

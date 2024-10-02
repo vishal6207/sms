@@ -162,4 +162,15 @@
   a {
     text-decoration: none;
   }
+  .sidebar::-webkit-scrollbar {
+    width: 8px; /* Set scrollbar width */
+  }
   
+  .sidebar::-webkit-scrollbar-thumb {
+    background-color: #888; /* Scrollbar thumb color */
+    border-radius: 10px; /* Makes the scrollbar thumb rounder */
+  }
+  
+  .sidebar::-webkit-scrollbar-track {
+    background: #1a1a1d; /* Background color of scrollbar track */
+  }

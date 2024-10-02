@@ -51,6 +51,9 @@ import Master from "./Component/Admin/Master/Master";
 
 function App() {
   const current_theme = localStorage.getItem("current_theme");
+  const [role, setRole] = useState()
+  const [isLoggedIn, setIsLoggedIn] = useState()
+  const [theme, setTheme] = useState()
 
   useEffect(() => {
     localStorage.setItem("current_theme", theme);
@@ -67,7 +70,10 @@ function App() {
         {isLoggedIn ? (
           <>
             {role === "admin" && (
+
+              
               <Route path="/admin" element={<AdminLayout />}>
+               
                 <Route index element={<Dashbord />} />
                 <Route path="master" element={<Master />} />
                 <Route path="teacher" element={<AddTeacher />} />
