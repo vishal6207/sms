@@ -1,0 +1,9 @@
+[build]
+  base    = "frontend"         # Directory containing your frontend code
+  publish = "frontend/build"   # Adjust this if your build output is in a different directory
+  command = "npm run build"    # Your build command, could be 'yarn build' or similar
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
