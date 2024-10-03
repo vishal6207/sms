@@ -1,16 +1,13 @@
 import mongoose, { Schema } from "mongoose";
 
 const schoolAdminSchema = mongoose.Schema({
-    schoolAdminName: {
+    username: {
         type: String,
         required: true
     },
     schoolName: {
         type: Schema.Types.ObjectId,
         ref: "School"
-    },
-    contactNo: {
-        type: String,
     },
     password: {
         type: String,
@@ -19,4 +16,4 @@ const schoolAdminSchema = mongoose.Schema({
 })
 
 
-export const SchoolAdmin = mongoose.modal("SchoolAdmin", schoolAdminSchema)
+export const SchoolAdmin = mongoose.model("SchoolAdmin", schoolAdminSchema)

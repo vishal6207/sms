@@ -1,4 +1,4 @@
-import mongoose from "mongoose"
+import mongoose, { Schema } from "mongoose"
 
 const parentSchema = new mongoose.Schema({
     parentName: {
@@ -21,4 +21,4 @@ const parentSchema = new mongoose.Schema({
     }
 })
 
-export const Parent = mongoose.modal("Parent", parentSchema)
+export const Parent = mongoose.model("Parent", parentSchema)

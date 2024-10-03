@@ -21,7 +21,7 @@ function LoginForm({ onLogin }) {
       return;
     }
 
-    const userDetail = await ApiManager.loginUser({ username, password, role });
+    const userDetail = await ApiManager.loginUser({ username, password });
 
     if (role === "admin") {
       onLogin("admin");
@@ -72,10 +72,10 @@ function LoginForm({ onLogin }) {
 
             <div className="wrap-input100">
               <label className="toggle-label">
-                <input 
-                  type="checkbox" 
+                <input
+                  type="checkbox"
                   checked={isAdminToggle}
-                  onChange={() => setIsAdminToggle(!isAdminToggle)} 
+                  onChange={() => setIsAdminToggle(!isAdminToggle)}
                 /> Admin login
               </label>
             </div>
@@ -83,40 +83,40 @@ function LoginForm({ onLogin }) {
             {/* Conditionally render radio buttons based on toggle state */}
             {!isAdminToggle && (
               <div className="contact100-form-checkbox">
-                <input 
-                  className="input-checkbox100" 
-                  id="ckb1" 
-                  type="radio" 
-                  name="role" 
-                  value="Student" 
-                  onChange={handleRoleChange} 
-                  required={!isAdminToggle} 
+                <input
+                  className="input-checkbox100"
+                  id="ckb1"
+                  type="radio"
+                  name="role"
+                  value="Student"
+                  onChange={handleRoleChange}
+                  required={!isAdminToggle}
                 />
                 <label className="label-checkbox100 text-white" htmlFor="ckb1">
                   Student
                 </label>
 
-                <input 
-                  className="input-checkbox100" 
-                  id="ckb2" 
-                  type="radio" 
-                  name="role" 
-                  value="Teacher" 
-                  onChange={handleRoleChange} 
-                  required={!isAdminToggle} 
+                <input
+                  className="input-checkbox100"
+                  id="ckb2"
+                  type="radio"
+                  name="role"
+                  value="Teacher"
+                  onChange={handleRoleChange}
+                  required={!isAdminToggle}
                 />
                 <label className="label-checkbox100 text-white" htmlFor="ckb2">
                   Teacher
                 </label>
 
-                <input 
-                  className="input-checkbox100" 
-                  id="ckb3" 
-                  type="radio" 
-                  name="role" 
-                  value="Parent" 
-                  onChange={handleRoleChange} 
-                  required={!isAdminToggle} 
+                <input
+                  className="input-checkbox100"
+                  id="ckb3"
+                  type="radio"
+                  name="role"
+                  value="Parent"
+                  onChange={handleRoleChange}
+                  required={!isAdminToggle}
                 />
                 <label className="label-checkbox100 text-white" htmlFor="ckb3">
                   Parent

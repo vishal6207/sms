@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
 const studentSchema = new mongoose.Schema({
     studentName: {
@@ -20,3 +20,6 @@ const studentSchema = new mongoose.Schema({
     }
 
 })
+
+
+export const Student = mongoose.model("Student", studentSchema)
