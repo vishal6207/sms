@@ -68,7 +68,10 @@ function App() {
         {isLoggedIn ? (
           <>
             {role === "admin" && (
+
+
               <Route path="/admin" element={<AdminLayout />}>
+
                 <Route index element={<Dashbord />} />
                 <Route path="master" element={<Master />} />
                 <Route path="teacher" element={<AddTeacher />} />
