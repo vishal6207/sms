@@ -9,5 +9,6 @@ const schoolSchema = mongoose.Schema({
     }
 })
 
-const School = mongoose.model("School", schoolSchema)
+export const School = mongoose.model("School", schoolSchema)
+
 

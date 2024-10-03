@@ -1,5 +1,5 @@
 const ENDPOINTS = {
-    LOGIN_USER: () => `user/login`,
+    LOGIN_USER: () => `users/login`,
 }
 
 
