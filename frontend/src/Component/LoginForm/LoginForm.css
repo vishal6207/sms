@@ -111,28 +111,28 @@
 }
 
 .label-checkbox100 {
-    font-family: 'Poppins';
-    font-size: 13px;
-    color: #fff;
-    line-height: 1.2;
-    
-    position: relative;
-    padding-left: 10px;
-    padding-bottom: 29px;
-    cursor: pointer;
-    
+  font-family: 'Poppins';
+  font-size: 13px;
+  color: #fff;
+  line-height: 1.2;
+
+  position: relative;
+  padding-left: 10px;
+  padding-bottom: 29px;
+  cursor: pointer;
+
 }
 
 
 
-.input100:focus + .label100,
-.input100:valid + .label100 {
+.input100:focus+.label100,
+.input100:valid+.label100 {
   top: 0;
   left: 10px;
   font-size: 16px;
   color: #ffffff;
- 
-  
+
+
 }
 
 .focus-input100 {
@@ -154,7 +154,9 @@
 .container-login100-form-btn {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .login100-form-btn {
@@ -201,4 +203,3 @@
   color: #b224ef;
   text-decoration: none;
 }
-

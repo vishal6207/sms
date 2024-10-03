@@ -24,6 +24,11 @@ import adminRouter from "./routes/admin.route.js"
 import studentRouter from "./routes/student.route.js"
 import teacherRouter from "./routes/teacher.route.js"
 import parentRouter from "./routes/parent.route.js"
+import userRouter from "./routes/users.route.js"
+
+//Common route for login 
+
+app.use("/api/v1/users", userRouter)
 
 
 //Routes for all roles : Admin, SchoolAdmin, Teacher, Student, Parent
