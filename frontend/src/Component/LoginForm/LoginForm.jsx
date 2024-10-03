@@ -1,38 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './LoginForm.css';
-// import logo from '../../assets/logo.png';
+import ApiManager from '../../Api/ApiManager';
 
 function LoginForm({ onLogin }) {
   const navigate = useNavigate();
+  const [isAdminToggle, setIsAdminToggle] = useState(false); // State for toggle
+  const [selectedRole, setSelectedRole] = useState(""); // State for selected role
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-
 
     const username = e.target.username.value;
     const password = e.target.pass.value;
+    const role = isAdminToggle ? "admin" : selectedRole; // Set role based on toggle
 
-    if (username === "a" && password === "1") {
+    // Ensure role is selected if toggle is not admin
+    if (!isAdminToggle && !selectedRole) {
+      alert("Please select a role");
+      return;
+    }
+
+    const userDetail = await ApiManager.loginUser({ username, password, role });
+
+    if (role === "admin") {
       onLogin("admin");
       navigate("/admin");
-
-
-    } else if (username === "s" && password === "2") {
+    } else if (username === "s" && password === "2" && role === "Student") {
       onLogin("Student");
       navigate("/Student");
-    } else if (username === "p" && password === "1") {
+    } else if (username === "p" && password === "1" && role === "Parent") {
       onLogin("Parent");
       navigate("/ParentDashboard");
-    }
-    else if (username === "t" && password === "3") {
+    } else if (username === "t" && password === "3" && role === "Teacher") {
       onLogin("Teacher");
       navigate("/teacher");
-    }
-    else {
+    } else {
       alert("Invalid credentials");
     }
+  };
+
+  const handleRoleChange = (e) => {
+    setSelectedRole(e.target.value); // Update selected role
   };
 
   return (
@@ -61,12 +70,59 @@ function LoginForm({ onLogin }) {
               <label className="label100">Password</label>
             </div>
 
-            <div className="contact100-form-checkbox">
-              <input className="input-checkbox100" id="ckb1" type="checkbox" name="remember-me" />
-              <label className="label-checkbox100 text-white" htmlFor="ckb1">
-                Remember me
+            <div className="wrap-input100">
+              <label className="toggle-label">
+                <input
+                  type="checkbox"
+                  checked={isAdminToggle}
+                  onChange={() => setIsAdminToggle(!isAdminToggle)}
+                /> Admin login
               </label>
             </div>
+
+            {/* Conditionally render radio buttons based on toggle state */}
+            {!isAdminToggle && (
+              <div className="contact100-form-checkbox">
+                <input
+                  className="input-checkbox100"
+                  id="ckb1"
+                  type="radio"
+                  name="role"
+                  value="Student"
+                  onChange={handleRoleChange}
+                  required={!isAdminToggle}
+                />
+                <label className="label-checkbox100 text-white" htmlFor="ckb1">
+                  Student
+                </label>
+
+                <input
+                  className="input-checkbox100"
+                  id="ckb2"
+                  type="radio"
+                  name="role"
+                  value="Teacher"
+                  onChange={handleRoleChange}
+                  required={!isAdminToggle}
+                />
+                <label className="label-checkbox100 text-white" htmlFor="ckb2">
+                  Teacher
+                </label>
+
+                <input
+                  className="input-checkbox100"
+                  id="ckb3"
+                  type="radio"
+                  name="role"
+                  value="Parent"
+                  onChange={handleRoleChange}
+                  required={!isAdminToggle}
+                />
+                <label className="label-checkbox100 text-white" htmlFor="ckb3">
+                  Parent
+                </label>
+              </div>
+            )}
 
             <div className="container-login100-form-btn">
               <button className="login100-form-btn" type="submit">
