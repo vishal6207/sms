@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './LoginForm.css'; 
+import './LoginForm.css';
 // import logo from '../../assets/logo.png';
 
 function LoginForm({ onLogin }) {
@@ -8,8 +8,8 @@ function LoginForm({ onLogin }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-  
+
+
 
     const username = e.target.username.value;
     const password = e.target.pass.value;
@@ -21,8 +21,8 @@ function LoginForm({ onLogin }) {
 
     } else if (username === "s" && password === "2") {
       onLogin("Student");
-      navigate("/Student");  
-    }else if (username === "p" && password === "1") {
+      navigate("/Student");
+    } else if (username === "p" && password === "1") {
       onLogin("Parent");
       navigate("/ParentDashboard");
     }
@@ -30,7 +30,7 @@ function LoginForm({ onLogin }) {
       onLogin("Teacher");
       navigate("/teacher");
     }
-     else {
+    else {
       alert("Invalid credentials");
     }
   };
@@ -48,32 +48,32 @@ function LoginForm({ onLogin }) {
             <span className="login100-form-title p-b-34 p-t-27">
               Log in
             </span>
-            
+
             <div className="wrap-input100">
               <input className="input100" type="text" name="username" required />
               <label className="label100">
                 Username
               </label>
             </div>
-            
+
             <div className="wrap-input100">
               <input className="input100" type="password" name="pass" required />
               <label className="label100">Password</label>
             </div>
-            
+
             <div className="contact100-form-checkbox">
               <input className="input-checkbox100" id="ckb1" type="checkbox" name="remember-me" />
               <label className="label-checkbox100 text-white" htmlFor="ckb1">
                 Remember me
               </label>
             </div>
-            
+
             <div className="container-login100-form-btn">
               <button className="login100-form-btn" type="submit">
                 Login
               </button>
             </div>
-            
+
             <div className="text-center p-t-90">
               <a className="txt1" href="#">
                 Forgot Password?

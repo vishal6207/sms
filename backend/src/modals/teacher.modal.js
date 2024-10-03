@@ -10,3 +10,5 @@ const teacherSchema = mongoose.Schema({
         ref: "School"
     }
 })
+
+export const Teacher = mongoose.model("Teacher", teacherSchema)
