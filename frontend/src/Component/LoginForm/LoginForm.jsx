@@ -21,7 +21,7 @@ function LoginForm({ onLogin }) {
       return;
     }
 
-    const userDetail = await ApiManager.loginUser({ username, password, role });
+    const userDetail = await ApiManager.loginUser({ username, password });
 
     if (role === "admin") {
       onLogin("admin");
