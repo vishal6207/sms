@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import brand from "../Assest/1t.jpg";
+// import brand from "../Assest/1t.jpg";
 import sch from "../Assest/sms0.jpg";
 import "./HomePage.css";
 import Navbar from "../../Navbar/Navbar";
