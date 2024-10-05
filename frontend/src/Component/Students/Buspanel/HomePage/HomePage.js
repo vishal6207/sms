@@ -13,7 +13,7 @@ const HomePage = () => {
 
       <div className="homepage-container">
         <div className="header-section">
-          <img src={brand || ""} alt="School Logo" className="school-logo" />
+          <img src={""} alt="School Logo" className="school-logo" />
           <div className="school-info">
             <h1>BUS PANEL IN SCHOOL MANAGEMENT SYSTEM</h1>
             <h2>ACS STEP UP HIGH SCHOOL</h2>
