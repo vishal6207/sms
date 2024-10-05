@@ -10,7 +10,7 @@ const HomePage = () => {
 
   return (
     <>
-     
+
       <div className="homepage-container">
         <div className="header-section">
           <img src={brand} alt="School Logo" className="school-logo" />
