@@ -5,201 +5,151 @@
 }
 
 .limiter {
-  width: 100%;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f7f7f7;
 }
 
 .container-login100 {
   width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  z-index: 1;
-}
-
-.container-login100::before {
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(255, 255, 255, 0.9);
+  max-width: 400px;
+  /* Standard size styling */
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .wrap-login100 {
-  width: 500px;
-  border-radius: 10px;
-  overflow: hidden;
-  padding: 55px 55px 37px;
-  background: linear-gradient(to bottom, #7579ff, #b224ef);
+  padding: 40px;
 }
 
-.login100-form {
-  width: 100%;
+.tabs-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  background-color: #f1f1f1;
+  /* Embedding with background */
+  border-radius: 8px;
+  /* Soft rounded corners */
+}
+
+.tab-button {
+  flex: 1;
+  padding: 12px 0;
+  background: #f1f1f1;
+  color: #333;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+}
+
+.tab-button:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+.tab-button:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+.tab-button.active {
+  background-color: #7579ff;
+  /* Active tab styling */
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  /* Simple effect for active tab */
+}
+
+.tab-button:hover {
+  background-color: #ccc;
 }
 
 .login100-form-logo {
-  font-size: 60px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background-color: #fff;
-  margin: 0 auto 30px;
-}
-
-.login100-form-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 30px;
-  color: #fff;
-  line-height: 1.2;
-  text-align: center;
-  text-transform: uppercase;
-  display: block;
-}
-
-.p-b-34 {
-  padding-bottom: 34px;
-}
-
-.p-t-27 {
-  padding-top: 27px;
-}
-
-.wrap-input100 {
-  width: 100%;
-  position: relative;
   margin-bottom: 30px;
 }
 
+.login100-form-title {
+  font-size: 22px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.wrap-input100 {
+  position: relative;
+  margin-bottom: 20px;
+}
+
 .input100 {
-  font-family: 'Poppins', sans-serif !important;
-  font-size: 16px;
-  color: #fff !important;
-  line-height: 1.2;
-  display: block;
   width: 100%;
-  height: 45px;
-  background: transparent;
-  padding: 0 5px 0 38px;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
   outline: none;
-  border: none;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.24);
+  transition: border-color 0.3s ease;
+}
+
+.input100:focus {
+  border-color: #7579ff;
 }
 
 .label100 {
   position: absolute;
-  top: 50%;
-  left: 18px;
-  transform: translateY(-50%);
-  color: #fff;
-  font-size: 19px;
-  pointer-events: none;
-  transition: 0.3s ease;
-}
-
-.label-checkbox100 {
-  font-family: 'Poppins';
-  font-size: 13px;
-  color: #fff;
-  line-height: 1.2;
-
-  position: relative;
-  padding-left: 10px;
-  padding-bottom: 29px;
-  cursor: pointer;
-
-}
-
-
-
-.input100:focus+.label100,
-.input100:valid+.label100 {
-  top: 0;
-  left: 10px;
-  font-size: 16px;
-  color: #ffffff;
-
-
-}
-
-.focus-input100 {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-}
-
-.contact100-form-checkbox {
-  padding-left: 5px;
-  padding-top: 5px;
-  padding-bottom: 35px;
+  top: -10px;
+  left: 15px;
+  background-color: #fff;
+  padding: 0 5px;
+  font-size: 12px;
+  color: #999;
 }
 
 .container-login100-form-btn {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .login100-form-btn {
-  font-family: 'Poppins', sans-serif;
+  background: #7579ff;
+  border: none;
+  padding: 12px 20px;
+  color: white;
   font-size: 16px;
-  color: #b224ef;
-  line-height: 1.2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 20px;
-  min-width: 120px;
-  height: 50px;
-  border-radius: 25px;
-  background: linear-gradient(to bottom, #7579ff, #b224ef);
-  position: relative;
-  z-index: 1;
-  transition: all 0.4s;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.login100-form-btn::before {
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  border-radius: 25px;
-  background-color: #fff;
-  top: 0;
-  left: 0;
-  opacity: 1;
-  transition: all 0.4s;
+.login100-form-btn:hover {
+  background: #5a55df;
+}
+
+.role-selection {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.label-checkbox100 {
+  color: #333;
+  margin-right: 10px;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .txt1 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 13px;
-  color: #e5e5e5;
-  line-height: 1.5;
+  color: #7579ff;
+  text-decoration: none;
 }
 
-.txt1 a {
-  color: #b224ef;
-  text-decoration: none;
+.txt1:hover {
+  text-decoration: underline;
 }

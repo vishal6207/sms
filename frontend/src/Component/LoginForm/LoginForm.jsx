@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './LoginForm.css';
+import './LoginForm.css'; // Assuming you are using CSS module for styling
 import ApiManager from '../../Api/ApiManager';
 
 function LoginForm({ onLogin }) {
   const navigate = useNavigate();
-  const [isAdminToggle, setIsAdminToggle] = useState(false); // State for toggle
+  const [selectedTab, setSelectedTab] = useState("admin"); // "admin" or "user"
   const [selectedRole, setSelectedRole] = useState(""); // State for selected role
 
   const handleSubmit = async (e) => {
@@ -13,24 +13,20 @@ function LoginForm({ onLogin }) {
 
     const username = e.target.username.value;
     const password = e.target.pass.value;
-    const role = isAdminToggle ? "admin" : selectedRole; // Set role based on toggle
+    const role = selectedTab === "admin" ? "admin" : selectedRole;
 
-    // Ensure role is selected if toggle is not admin
-    if (!isAdminToggle && !selectedRole) {
+    if (selectedTab !== "admin" && !selectedRole) {
       alert("Please select a role");
       return;
     }
 
     const userDetail = await ApiManager.loginUser({
       username: "admin123",
-      password: "123" ,
-      role: "admin"
-      });
-      
+      password: "123",
+      role: "admin",
+    });
 
-      console.log("userdetailsssssss", userDetail)
-
-
+    console.log("User details:", userDetail);
 
     if (role === "admin") {
       onLogin("admin");
@@ -57,21 +53,30 @@ function LoginForm({ onLogin }) {
     <div className="limiter">
       <div className="container-login100">
         <div className="wrap-login100">
+          <div className="tabs-container">
+            <button
+              className={`tab-button ${selectedTab === "admin" ? "active" : ""}`}
+              onClick={() => setSelectedTab("admin")}
+            >
+              Admin
+            </button>
+            <button
+              className={`tab-button ${selectedTab === "user" ? "active" : ""}`}
+              onClick={() => setSelectedTab("user")}
+            >
+              User
+            </button>
+          </div>
+
           <form className="login100-form validate-form" onSubmit={handleSubmit}>
             <span className="login100-form-logo">
-              <i className="zmdi zmdi-landscape">
-                {/* <img src={logo} alt="Logo" width={170} /> */}
-              </i>
+              <i className="zmdi zmdi-landscape"></i>
             </span>
-            <span className="login100-form-title p-b-34 p-t-27">
-              Log in
-            </span>
+            <span className="login100-form-title p-b-34 p-t-27">Log in</span>
 
             <div className="wrap-input100">
               <input className="input100" type="text" name="username" required />
-              <label className="label100">
-                Username
-              </label>
+              <label className="label100">Username</label>
             </div>
 
             <div className="wrap-input100">
@@ -79,19 +84,9 @@ function LoginForm({ onLogin }) {
               <label className="label100">Password</label>
             </div>
 
-            <div className="wrap-input100">
-              <label className="toggle-label">
-                <input
-                  type="checkbox"
-                  checked={isAdminToggle}
-                  onChange={() => setIsAdminToggle(!isAdminToggle)}
-                /> Admin login
-              </label>
-            </div>
-
-            {/* Conditionally render radio buttons based on toggle state */}
-            {!isAdminToggle && (
-              <div className="contact100-form-checkbox">
+            {/* Conditionally render content based on selected tab */}
+            {selectedTab === "user" && (
+              <div className="contact100-form-checkbox role-selection">
                 <input
                   className="input-checkbox100"
                   id="ckb1"
@@ -99,9 +94,9 @@ function LoginForm({ onLogin }) {
                   name="role"
                   value="Student"
                   onChange={handleRoleChange}
-                  required={!isAdminToggle}
+                  required={selectedTab === "user"}
                 />
-                <label className="label-checkbox100 text-white" htmlFor="ckb1">
+                <label className="label-checkbox100" htmlFor="ckb1">
                   Student
                 </label>
 
@@ -112,9 +107,9 @@ function LoginForm({ onLogin }) {
                   name="role"
                   value="Teacher"
                   onChange={handleRoleChange}
-                  required={!isAdminToggle}
+                  required={selectedTab === "user"}
                 />
-                <label className="label-checkbox100 text-white" htmlFor="ckb2">
+                <label className="label-checkbox100" htmlFor="ckb2">
                   Teacher
                 </label>
 
@@ -125,9 +120,9 @@ function LoginForm({ onLogin }) {
                   name="role"
                   value="Parent"
                   onChange={handleRoleChange}
-                  required={!isAdminToggle}
+                  required={selectedTab === "user"}
                 />
-                <label className="label-checkbox100 text-white" htmlFor="ckb3">
+                <label className="label-checkbox100" htmlFor="ckb3">
                   Parent
                 </label>
               </div>
