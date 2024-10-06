@@ -1,6 +1,6 @@
 import React from 'react'
 import './Attandance.css'
-const Attandance = () => {
+const Attandances = () => {
   return (
     <div className='attandanceContainer'>
       <div>
@@ -52,4 +52,4 @@ const Attandance = () => {
   )
 } 
 
-export default Attandance
+export default Attandances;

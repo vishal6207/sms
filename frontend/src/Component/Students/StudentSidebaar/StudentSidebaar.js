@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { FaBars } from 'react-icons/fa';
 import { BiSearch } from 'react-icons/bi';
 import { SiWindows } from 'react-icons/si';
-import { IoTimer } from "react-icons/io5";
+import { IoCalendarOutline, IoTimer } from "react-icons/io5";
 
 import { PiExamDuotone } from "react-icons/pi";
 
@@ -26,6 +26,10 @@ const routes = [
   {
     path:'/timetable',name:'Time Table',icon:<IoTimer />
   },
+  {
+    path:'/attandance',name:'Attandance',icon:<IoCalendarOutline/>
+  },
+
   {
     path:'/examination',name:'Examination',icon:<PiExamDuotone />
   },

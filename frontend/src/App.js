@@ -91,6 +91,8 @@ function App() {
                 <Route path="/" element={<StudLayout />}>
                   <Route index element={<StudentHome />} />
                   <Route path="/timetable" element={<TimeTable />} />
+                  <Route path="attandance" element={<Attendence />} />
+
                   <Route path="/examination" element={<ExaminationPanel />} />
                   <Route path="/fee-panel" element={<FeePanel />} />
                   <Route path="/workspace" element={<Workspace />} />
@@ -106,7 +108,8 @@ function App() {
                 <Route path="dashbord" element={<Dashbord />} />
                 <Route path="student" element={<StudentLayout />}>
                   <Route path="student" element={<AddStudent />} />
-                  <Route path="attendence" element={<Attendence />} />
+                  {/* <Route path="attendence" element={<Attendence />} /> */}
+                <Route path="attendence" element={<TakeAttendence />} />
                   <Route path="notice" element={<TeacherNotice />} />
                   <Route path="timetable" element={<Timetable />} />
                   <Route path="sylabus" element={<StudentSylabus />} />
