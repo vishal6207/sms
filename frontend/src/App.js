@@ -1,143 +1,139 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useState, useMemo, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { AppContext } from "./context/AppContext";
 import LoginForm from "./Component/LoginForm/LoginForm";
-import StudentHome from "./Component/Students/StudentHome/StudentHome";
-import TimeTable from "./Component/Students/TimeTable/Timetable";
-import ExaminationPanel from "./Component/Students/examinationpannel/ExaminationPanel";
-import FeePanel from "./Component/Students/FeePanel/FeePanel";
-import Workspace from "./Component/Students/WorkSpace/Workspace";
-import HomePage from "./Component/Students/Buspanel/HomePage/HomePage";
-import RegistrationForm from "./Component/Students/Buspanel/RegistrationForm/RegistrationForm";
-import CreateRoot from "./Component/Admin/Transport/CreateRoot/CreateRoot";
-import BusStop from "./Component/Admin/Transport/BusStop/BusStop";
-import VehicleMaster from "./Component/Admin/Transport/CreateVehicale/VehicleMaster";
-import StudentBusStop from "./Component/Admin/Transport/StudentBusStop/StudentBusStop";
-import TeacherSidebar from "./Component/Teacher/TeacherSidebaar/TeacherSidebar";
-import Layout from "./Component/Teacher/TeacherSidebaar/LayOut/Layout";
-import Navbar from "./Component/Students/Navbar/Navbar";
 import "./App.css";
-import StudentInfo from "./Component/Students/StudentHome/StudentInfo/StudentInfo";
-import Student from "./Component/Teacher/Student/Student";
-import NoticeBoard from "./Component/Students/StudentHome/NoticeBoard/NoticeBoard";
-import TeacherNotice from './Component/Teacher/TeacherNotice/TeacherNotice'
 
-import Attandance from "./Component/Teacher/Attandance/Attandance";
-import Syllabus from "./Component/Students/StudentHome/Syllabus/Syllabus";
-import Notes from "./Component/Teacher/Notes/Notes";
-import Feedback from "./Component/Teacher/Feedback/Feedback";
-import Mark from './Component/Teacher/Mark/Mark'
-import Setting from "./Component/Teacher/Setting/Setting";
-import Timetable from "./Component/Students/TimeTable/Timetable";
-import StudentSylabus from "./Component/Teacher/Sylabus/StudentSylabus";
-import Dashbord from "./Component/Teacher/Dashbord/Dashbord";
-import StudentLayout from "./Component/Teacher/StudentLayout/StudentLayout";
-import TeacherUploadMarks from './Component/Teacher/TeacherUploadMarks/TeacherUploadMarks'
-import Subjects from "./Component/Teacher/Subject/Subjects"
-import AddStudent from './Component/Admin/AddStudent/AddStudent'
-import Exams from "./Component/Teacher/Exams/Exams";
-import Attendence from "./Component/Students/Attendence/Attendence";
-import StudLayout from "./Component/Students/StudentLayout/StudLayout";
-import AdminLayout from "./Component/Admin/AdminLayout/AdminLayout";
-import AddTeacher from "./Component/Admin/AddTeachers/AddTeachers";
-import TakeAttendence from "./Component/Teacher/TakeAttendence/TakeAttendence";
-import AdminSetting from "./Component/Admin/Settingadmin/AdminSetting";
-import Busservices from './Component/Admin/Transport/Adminbusadd/Busservices'
-import AdminStudent from "./Component/Admin/AdminStudent/AdminStuden";
-import Master from "./Component/Admin/Master/Master";
+// Lazy-loaded components for better performance
+const StudentHome = React.lazy(() => import("./Component/Students/StudentHome/StudentHome"));
+const TimeTable = React.lazy(() => import("./Component/Students/TimeTable/Timetable"));
+const ExaminationPanel = React.lazy(() => import("./Component/Students/examinationpannel/ExaminationPanel"));
+const FeePanel = React.lazy(() => import("./Component/Students/FeePanel/FeePanel"));
+const Workspace = React.lazy(() => import("./Component/Students/WorkSpace/Workspace"));
+const HomePage = React.lazy(() => import("./Component/Students/Buspanel/HomePage/HomePage"));
+const RegistrationForm = React.lazy(() => import("./Component/Students/Buspanel/RegistrationForm/RegistrationForm"));
+const Attendence = React.lazy(() => import("./Component/Students/Attendence/Attendence"));
+const StudLayout = React.lazy(() => import("./Component/Students/StudentLayout/StudLayout"));
 
+// Teacher components
+const Layout = React.lazy(() => import("./Component/Teacher/TeacherSidebaar/LayOut/Layout"));
+const Dashbord = React.lazy(() => import("./Component/Teacher/Dashbord/Dashbord"));
+const StudentLayout = React.lazy(() => import("./Component/Teacher/StudentLayout/StudentLayout"));
+const Notes = React.lazy(() => import("./Component/Teacher/Notes/Notes"));
+const Feedback = React.lazy(() => import("./Component/Teacher/Feedback/Feedback"));
+const TeacherUploadMarks = React.lazy(() => import("./Component/Teacher/TeacherUploadMarks/TeacherUploadMarks"));
+const Exams = React.lazy(() => import("./Component/Teacher/Exams/Exams"));
+const Subjects = React.lazy(() => import("./Component/Teacher/Subject/Subjects"));
+const TakeAttendence = React.lazy(() => import("./Component/Teacher/TakeAttendence/TakeAttendence"));
+const Setting = React.lazy(() => import("./Component/Teacher/Setting/Setting"));
+
+// Admin components
+const AdminLayout = React.lazy(() => import("./Component/Admin/AdminLayout/AdminLayout"));
+const Master = React.lazy(() => import("./Component/Admin/Master/Master"));
+const AddTeacher = React.lazy(() => import("./Component/Admin/AddTeachers/AddTeachers"));
+const AdminStudent = React.lazy(() => import("./Component/Admin/AdminStudent/AdminStuden"));
+const AdminSetting = React.lazy(() => import("./Component/Admin/Settingadmin/AdminSetting"));
+const VehicleMaster = React.lazy(() => import("./Component/Admin/Transport/CreateVehicale/VehicleMaster"));
+const Busservices = React.lazy(() => import("./Component/Admin/Transport/Adminbusadd/Busservices"));
+
+// make later utility Component for Suspense UI
+const Loading = () => <div>Loading...</div>;
 
 function App() {
-  const current_theme = localStorage.getItem("current_theme");
-  const [role, setRole] = useState()
-  const [isLoggedIn, setIsLoggedIn] = useState()
-  const [theme, setTheme] = useState()
+
+  console.log("app rendring......")
+  const { currentUser } = useContext(AppContext);
+
+  const [userLoggedIn, setUserLoggedIn] = useState(currentUser?.isLoggedIn || false)
 
 
-  useEffect(() => {
-    localStorage.setItem("current_theme", theme);
-  }, [theme]);
+  const userRole = currentUser?.userRole;
 
-  const handleLogin = (userRole) => {
-    setIsLoggedIn(true);
-    setRole(userRole);
+
+  console.log("============>", currentUser)
+
+
+  // const appContextValue = useMemo(() => ({
+  //   currentUser: localStorage.getItem("current_user"),
+  //   currentTheme: localStorage.getItem("current_theme"),
+  //   userRole: "Admin",
+  //   userLoggedIn: false,
+  //   apiUrl: "",
+  //   hostUrl: "",
+  // }), [userLoggedIn]);
+
+  const roleBasedRoutes = (role) => {
+    console.log("route role: ", role)
+    switch (role) {
+      case "admin":
+        return (
+          <Route path="/admin" element={<AdminLayout />}>
+            <Route index element={<Dashbord />} />
+            <Route path="master" element={<Master />} />
+            <Route path="teacher" element={<AddTeacher />} />
+            <Route path="student" element={<AdminStudent />} />
+            <Route path="subject" element={<Subjects />} />
+            <Route path="attendence" element={<TakeAttendence />} />
+            <Route path="bus-service" element={<VehicleMaster />} />
+            <Route path="bus-management" element={<Busservices />} />
+            <Route path="setting" element={<AdminSetting />} />
+          </Route>
+        );
+      case "student":
+        return (
+          <Route path="/" element={<StudLayout />}>
+            <Route index element={<StudentHome />} />
+            <Route path="/timetable" element={<TimeTable />} />
+            <Route path="/examination" element={<ExaminationPanel />} />
+            <Route path="/fee-panel" element={<FeePanel />} />
+            <Route path="/workspace" element={<Workspace />} />
+            <Route path="/bus-route" element={<HomePage />} />
+            <Route path="/register" element={<RegistrationForm />} />
+            <Route path="/attendence" element={<Attendence />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Route>
+        );
+      case "teacher":
+        return (
+          <Route path="/teacher" element={<Layout />}>
+            <Route index element={<Dashbord />} />
+            <Route path="student" element={<StudentLayout />}>
+              <Route path="add-student" element={<AdminStudent />} />
+              <Route path="attendence" element={<Attendence />} />
+              <Route path="notes" element={<Notes />} />
+              <Route path="exams" element={<Exams />} />
+              <Route path="mark" element={<TeacherUploadMarks />} />
+            </Route>
+            <Route path="feedback" element={<Feedback />} />
+            <Route path="subject" element={<Subjects />} />
+            <Route path="setting" element={<Setting />} />
+          </Route>
+        );
+      case "parent":
+        return (
+          <Route path="/ParentDashboard" element={<Dashbord />}>
+            <Route path="sylabus" element={<Subjects />} />
+          </Route>
+        );
+      default:
+        return <Route path="*" element={<Navigate to="/" />} />
+    }
   };
 
   return (
-    <Router>
-      <Routes>
-        {isLoggedIn ? (
-          <>
-            {role === "admin" && (
-
-
-              <Route path="/admin" element={<AdminLayout />}>
-
-                <Route index element={<Dashbord />} />
-                <Route path="master" element={<Master />} />
-                <Route path="teacher" element={<AddTeacher />} />
-                <Route path="student" element={<AdminStudent />} />
-                <Route path="subject" element={<Subjects />} />
-                <Route path="Attandance" element={<TakeAttendence />} />
-                <Route path="Noticeboard" element={<TeacherNotice />} />
-                <Route path="Timetable" element={<TimeTable />} />
-                <Route path="sylabus" element={<StudentSylabus />} />
-                <Route path="bus-service" element={<VehicleMaster />} />
-                <Route path="setting" element={<AdminSetting />} />
-
-              </Route>
+    <AppContext.Provider>
+      <Router>
+        <Suspense fallback={<Loading />}>
+          <Routes>
+            {userLoggedIn ? roleBasedRoutes(userRole) : (
+              <Route path="*" element={<LoginForm setUserLoggedIn={setUserLoggedIn} />} />
             )}
-            {role === "Student" && (
-              <>
-                <Route path="/" element={<StudLayout />}>
-                  <Route index element={<StudentHome />} />
-                  <Route path="/timetable" element={<TimeTable />} />
-                  <Route path="attandance" element={<Attendence />} />
-
-                  <Route path="/examination" element={<ExaminationPanel />} />
-                  <Route path="/fee-panel" element={<FeePanel />} />
-                  <Route path="/workspace" element={<Workspace />} />
-                  <Route path="/bus-route" element={<HomePage />} />
-                  <Route path="/register" element={<RegistrationForm />} />
-                  <Route path="*" element={<Navigate to="/" />} />
-                </Route>
-              </>
-            )}
-            {role === "Teacher" && (
-              <Route path="/teacher" element={<Layout />}>
-                <Route index element={<StudentHome />} />
-                <Route path="dashbord" element={<Dashbord />} />
-                <Route path="student" element={<StudentLayout />}>
-                  <Route path="student" element={<AddStudent />} />
-                  {/* <Route path="attendence" element={<Attendence />} /> */}
-                <Route path="attendence" element={<TakeAttendence />} />
-                  <Route path="notice" element={<TeacherNotice />} />
-                  <Route path="timetable" element={<Timetable />} />
-                  <Route path="sylabus" element={<StudentSylabus />} />
-                  <Route path="subject" element={<Subjects />} />
-                  <Route path="notes" element={<Notes />} />
-                  <Route path="exams" element={<Exams />} />
-                  <Route path="mark" element={<TeacherUploadMarks />} />
-
-                </Route>
-
-                <Route path="setting" element={<AdminSetting />} />
-
-
-              </Route>
-            )}
-            {role === "Parent" && (
-              <Route path="/ParentDashboard" element={<Dashbord />}>
-                <Route path="sylabus" element={<StudentSylabus />} />
-              </Route>
-            )}
-          </>
-        ) : (
-          <Route path="*" element={<LoginForm onLogin={handleLogin} />} />
-        )}
-      </Routes>
-
-    </Router>
+          </Routes>
+        </Suspense>
+      </Router>
+    </AppContext.Provider>
   );
+
 }
 
 export default App;

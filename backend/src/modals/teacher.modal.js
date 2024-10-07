@@ -5,7 +5,7 @@ const teacherSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    schoolName: {
+    school: {
         type: Schema.Types.ObjectId,
         ref: "School"
     }

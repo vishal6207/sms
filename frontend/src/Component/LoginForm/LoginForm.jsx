@@ -3,60 +3,69 @@ import { useNavigate } from 'react-router-dom';
 import './LoginForm.css'; // Assuming you are using CSS module for styling
 import ApiManager from '../../Api/ApiManager';
 
-function LoginForm({ onLogin }) {
+function LoginForm({ setUserLoggedIn }) {
   const navigate = useNavigate();
-  const [selectedTab, setSelectedTab] = useState("admin"); // "admin" or "user"
-  const [selectedRole, setSelectedRole] = useState(""); // State for selected role
+  const [selectedTab, setSelectedTab] = useState("admin"); // Set initial selected tab to "admin"
+  const [selectedRole, setSelectedRole] = useState(""); // Track the selected role for user
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const username = e.target.username.value;
-    const password = e.target.pass.value;
+    const username = e.target.username.value.trim();
+    const password = e.target.pass.value.trim();
+
+    // Determine role based on selected tab
     const role = selectedTab === "admin" ? "admin" : selectedRole;
 
-    if (selectedTab !== "admin" && !selectedRole) {
+    if (selectedTab === "user" && !selectedRole) {
       alert("Please select a role");
       return;
     }
 
-    const userDetail = await ApiManager.loginUser({
-      username: "admin123",
-      password: "123",
-      role: "admin",
-    });
+    try {
+      const userDetail = await ApiManager.loginUser({ username, password, role });
+      console.log("=======>", userDetail)
+      if (userDetail?.success) {
+        const { _id: userId, school } = userDetail?.data || {};
+        const { username: userName } = userDetail?.data || {};
 
-    console.log("User details:", userDetail);
+        const currentUser = {
+          userId,
+          schoolId: school?._id,
+          userName,
+          userRole: role,
+        };
 
-    if (role === "admin") {
-      onLogin("admin");
-      navigate("/admin");
-    } else if (username === "s" && password === "2" && role === "Student") {
-      onLogin("Student");
-      navigate("/Student");
-    } else if (username === "p" && password === "1" && role === "Parent") {
-      onLogin("Parent");
-      navigate("/ParentDashboard");
-    } else if (username === "t" && password === "3" && role === "Teacher") {
-      onLogin("Teacher");
-      navigate("/teacher");
-    } else {
-      alert("Invalid credentials");
+        localStorage.setItem("currentUser", JSON.stringify(currentUser));
+
+        // Set the logged-in state and navigate based on role
+        setUserLoggedIn(true);
+        navigate(`/${role}`);
+      } else {
+        alert("Login failed. Please check your credentials.");
+      }
+    } catch (err) {
+      console.error("Login error:", err);
+      alert("An error occurred while logging in. Please try again.");
     }
   };
 
   const handleRoleChange = (e) => {
-    setSelectedRole(e.target.value); // Update selected role
+    setSelectedRole(e.target.value);
   };
 
   return (
     <div className="limiter">
       <div className="container-login100">
         <div className="wrap-login100">
+          {/* Tab Selection for Admin and User */}
           <div className="tabs-container">
             <button
               className={`tab-button ${selectedTab === "admin" ? "active" : ""}`}
-              onClick={() => setSelectedTab("admin")}
+              onClick={() => {
+                setSelectedTab("admin");
+                setSelectedRole(""); // Clear any user role selection when admin is selected
+              }}
             >
               Admin
             </button>
@@ -84,7 +93,7 @@ function LoginForm({ onLogin }) {
               <label className="label100">Password</label>
             </div>
 
-            {/* Conditionally render content based on selected tab */}
+            {/* Conditionally render role selection if the User tab is selected */}
             {selectedTab === "user" && (
               <div className="contact100-form-checkbox role-selection">
                 <input
@@ -92,7 +101,7 @@ function LoginForm({ onLogin }) {
                   id="ckb1"
                   type="radio"
                   name="role"
-                  value="Student"
+                  value="student"
                   onChange={handleRoleChange}
                   required={selectedTab === "user"}
                 />
@@ -105,7 +114,7 @@ function LoginForm({ onLogin }) {
                   id="ckb2"
                   type="radio"
                   name="role"
-                  value="Teacher"
+                  value="teacher"
                   onChange={handleRoleChange}
                   required={selectedTab === "user"}
                 />
@@ -118,7 +127,7 @@ function LoginForm({ onLogin }) {
                   id="ckb3"
                   type="radio"
                   name="role"
-                  value="Parent"
+                  value="parent"
                   onChange={handleRoleChange}
                   required={selectedTab === "user"}
                 />

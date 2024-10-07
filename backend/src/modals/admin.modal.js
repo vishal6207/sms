@@ -2,17 +2,12 @@ import mongoose, { Schema } from "mongoose"
 
 
 const adminSchema = new mongoose.Schema({
-    name: {
-        type: String
+    userName: {
+        type: String,
     },
 
     password: {
         type: String
-    },
-
-    schoolName: {
-        type: Schema.Types.ObjectId,
-        ref: "School"
     },
 })
 

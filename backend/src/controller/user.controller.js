@@ -37,7 +37,10 @@ const loginUser = expressAsyncHandler(async (req, res) => {
     const existingUser = await userModel.findOne({
         username: username,
         password: password
-    }).populate('schoolName')
+    }).populate('school').select("-password")
+
+
+    console.log(existingUser)
 
 
     // Handle case when no user is found

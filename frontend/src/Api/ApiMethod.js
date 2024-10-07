@@ -15,7 +15,7 @@ class ApiMethod {
         url = API_URL + url
         return new Promise((resolve, reject) => {
             fetch(url, { method, body: JSON.stringify(body), headers: getHeaders() })
-                .then((res) => res.json)
+                .then((res) => res.json())
                 .then(resolve)
                 .catch(reject)
         })
